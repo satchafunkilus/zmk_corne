@@ -38,7 +38,7 @@
                                           &none         &lt 1 TAB  &kp SPACE    &kp RET  &lt 2 BACKSPACE      &none
             >;
 
-            sensor-bindings = <&inc_dec_kp undefined>;
+//            sensor-bindings = <&inc_dec_kp undefined>;
         };
 
         lower_layer {
