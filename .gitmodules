@@ -1,3 +1,0 @@
-[submodule "zkm-nodefree-config"]
-	path = zkm-nodefree-config
-	url = https://github.com/urob/zmk-nodefree-config.git
