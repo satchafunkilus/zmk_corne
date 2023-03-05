@@ -10,7 +10,8 @@
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/german_alt.dtsi"
 
-
+// Umlaut as Mod-Tap
+#define DEAE &de_ae 
 
 / {
     behaviors {
@@ -33,7 +34,7 @@
         default_layer {
             bindings = <
             &kp TAB     &kp Q       &kp W        &kp F        &kp P             &kp B      &kp J            &kp L               &kp U        &kp Y       &kp SEMICOLON   &kp BSPC
-            &kp LCTRL   &mt LALT A  &hm LALT R   &hm LCTRL S  &hm LEFT_SHIFT T  &kp G      &kp M            &kp N               &kp E        &kp I       &kp O           &kp SQT
+            &kp LCTRL   &mt DEAE A  &hm LALT R   &hm LCTRL S  &hm LEFT_SHIFT T  &kp G      &kp M            &kp N               &kp E        &kp I       &kp O           &kp SQT
             &kp LSHFT   &kp Z       &kp X        &kp C        &kp D             &kp V      &kp K            &kp H               &kp COMMA    &kp DOT     &kp FSLH        &kp ESC
                                                 &none         &lt 1 TAB         &kp SPACE  &kp RET          &lt 2 BACKSPACE     &none
             >;
