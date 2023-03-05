@@ -45,7 +45,7 @@
             &kp TAB     &kp Q       &hm LGUI W   &kp F        &kp P        &kp B      &kp J      &kp L              &mt UUML U   &kp Y       &kp SEMICOLON   &kp BSPC
             &kp LCTRL   &mt AUML A  &hm LALT R   &hm LCTRL S  &hm LSHFT T  &kp G      &kp M      &hm RSHFT N        &hm RCTRL E  &hm RALT I  &mt OUML O      &kp SQT
             &kp LSHFT   &mt DESZ Z  &kp X        &kp C        &kp D        &kp V      &kp K      &kp H              &kp COMMA    &kp DOT     &kp FSLH        &kp ESC
-                                                &none         &lt RAI TAB  &kp SPACE  &kp RET    &lt LOW BSPC    &none
+                                                &none         &lt RAI TAB  &kp SPACE  &kp RET    &lt LOW BSPC       &none
             >;
 
 //            sensor-bindings = <&inc_dec_kp undefined>;
