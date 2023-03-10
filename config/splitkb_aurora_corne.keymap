@@ -45,10 +45,10 @@
 
         default_layer {
             bindings = <
-            &kp TAB     &kp Q       &kp W       &kp F      &kp P        &kp B             &kp J      &kp L    &kp U     &kp Y       &kp SEMICOLON   &kp BSPC          
-            &kp LCTRL   &kp A       &kp R       &kp S      &kp T        &kp G             &kp M      &kp N    &kp E     &kp I       &kp O           &kp SQT        
+            &kp ESC     &kp Q       &kp W       &kp F      &kp P        &kp B             &kp J      &kp L    &kp U     &kp Y       &kp SEMICOLON   &kp BSPC          
+            &kp TAB     &kp A       &kp R       &kp S      &kp T        &kp G             &kp M      &kp N    &kp E     &kp I       &kp O           &kp SQT        
             &kp LSHFT   &kp Z       &kp X       &kp C      &kp D        &kp V             &kp K      &kp H    &kp COMMA &kp DOT     &kp FSLH        &kp ESC
-                                                &none      &lt RAI TAB  &kp SPACE  &kp RET    &lt LOW BSPC       &none
+                                                &kp LCTRL  &lt RAI TAB  &kp SPACE         &kp RET    &lt LOW BSPC  &kp RALT
             >;
 
 //            sensor-bindings = <&inc_dec_kp undefined>;
