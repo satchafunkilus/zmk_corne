@@ -11,6 +11,7 @@
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/german_alt.dtsi"
 #include <dt-bindings/zmk/outputs.h>
+#include "makros.dtsi"
 
 // Layer names
 #define BASE    0
@@ -24,11 +25,7 @@
 #define UUML &de_ue 
 #define DESZ &de_eszett 
 
-// Euro sign
-ZMK_UNICODE_SINGLE(euro_sign, KP_N0, KP_N1, KP_N2, KP_N8)
 
-// Conditional layer
-ZMK_CONDITIONAL_LAYER(1 2, 3)
 
 &lt {
     tapping-term-ms = <200>;
