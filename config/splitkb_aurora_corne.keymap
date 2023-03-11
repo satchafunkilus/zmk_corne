@@ -30,6 +30,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 ZMK_CONDITIONAL_LAYER(1 2, 3)
 
 &lt {
+    tapping-term-ms = <300>;
     quick-tap-ms = <125>;
 };
 
