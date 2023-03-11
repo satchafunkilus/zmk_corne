@@ -48,6 +48,18 @@ ZMK_CONDITIONAL_LAYER(1 2, 3)
                 <&kp>,
                 <&kp>;
         };
+        ut_a: umlaut_a {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Umlaute";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&de_ae>,
+                <&kp>;
+        };
     };
 
 // &kp TAB     &kp Q       &hm LGUI W   &kp F        &kp P        &kp B      &kp J      &kp L              &mt UUML U   &kp Y       &kp SEMICOLON   &kp BSPC
@@ -59,7 +71,7 @@ ZMK_CONDITIONAL_LAYER(1 2, 3)
         default_layer {
             bindings = <
             &kp ESC     &kp Q       &kp W       &kp F           &kp P        &kp B         &kp J      &kp L         &hm UUML U      &kp Y       &kp SEMICOLON   &kp BSPC          
-            &kp TAB     &hm AUML A  &hm LALT R  &hm LCTRL S     &hm LSHFT T  &kp G         &kp M      &hm RSHFT N   &hm RCTRL E     &hm RALT I  &hm OUML O      &kp SQT        
+            &kp TAB     &ut_a A  &hm LALT R  &hm LCTRL S     &hm LSHFT T  &kp G         &kp M      &hm RSHFT N   &hm RCTRL E     &hm RALT I  &hm OUML O      &kp SQT        
             &kp LSHFT   &hm DESZ Z  &kp X       &kp C           &kp D        &kp V         &kp K      &kp H         &kp COMMA       &kp DOT     &kp FSLH        &kp LGUI
                                                 &kp LCTRL       &lt RAI TAB  &kp SPACE     &kp RETURN &lt LOW BSPC  &kp RALT
             >;
