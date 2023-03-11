@@ -23,6 +23,9 @@
 #define UUML &de_ue 
 #define DESZ &de_eszett 
 
+// Euro sign
+ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
+
 &lt {
     quick-tap-ms = <125>;
 };
