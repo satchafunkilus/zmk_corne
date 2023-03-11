@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/mouse.h>
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/german_alt.dtsi"
 
@@ -65,7 +64,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             &kp ESC     &kp Q       &kp W       &kp F           &kp P        &kp B         &kp J      &kp L         &hm UUML U      &kp Y       &kp SEMICOLON   &kp BSPC          
             &kp TAB     &hm AUML A  &hm LALT R  &hm LCTRL S     &hm LSHFT T  &kp G         &kp M      &hm RSHFT N   &hm RCTRL E     &hm RALT I  &hm OUML O      &kp SQT        
             &kp LSHFT   &hm DESZ Z  &kp X       &kp C           &kp D        &kp V         &kp K      &kp H         &kp COMMA       &kp DOT     &kp FSLH        &kp LGUI
-                                                &kp LCTRL       &lt RAI TAB  &kp SPACE     &kp RET    &lt LOW BSPC  &kp RALT
+                                                &kp LCTRL       &lt RAI TAB  &kp SPACE     &kp RETURN &lt LOW BSPC  &kp RALT
             >;
 
 //            sensor-bindings = <&inc_dec_kp undefined>;
@@ -80,9 +79,9 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
             bindings = <
             &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6            &kp N7          &kp N8      &kp N9      &kp N0      &kp BSPC
-            &none       &kp DEL     &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(Z)       &kp SCROLL_UP     &kp LEFT        &kp DOWN    &kp UP      &kp RIGHT   &trans
-            &kp LSHFT   &none       &none       &none       &kp LCTRL   &none           &kp SCROLL_DOWN   &kp HOME        &kp PG_DN   &kp PG_UP   &kp END     &trans 
-                                                &trans      &trans      &kp SPACE       &kp RET           &lt LOW DEL     &kp LC(LALT)
+            &none       &kp DEL     &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(Z)       &kp PRINTSCREEN   &kp LEFT        &kp DOWN    &kp UP      &kp RIGHT   &trans
+            &kp LSHFT   &none       &none       &none       &kp PRINTSCREEN   &none           &none             &kp HOME        &kp PG_DN   &kp PG_UP   &kp END     &trans 
+                                                &trans      &trans      &kp SPACE       &kp RETURN        &lt LOW DEL     &kp LC(LALT)
             >;
         };
 
@@ -97,7 +96,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             &kp ESC      &kp EXCL   &kp AT      &kp HASH    &kp DLLR    &kp PRCNT   &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp BSPC
             &kp TAB      &trans     &trans      &trans      &trans      &trans      &kp MINUS   &kp EQUAL   &kp LBKT        &kp RBKT  &kp PIPE  &kp GRAVE
             &kp LSHFT    &trans     &trans      &trans      &trans      &trans      &kp UNDER   &kp PLUS    &kp LBRC        &kp RBRC  &kp BSLH  &kp TILDE
-                                                &trans      &none       &kp SPACE   &kp RET     &trans      &kp RALT
+                                                &trans      &none       &kp SPACE   &kp RETURN  &trans      &kp RALT
             >;
         };
 
