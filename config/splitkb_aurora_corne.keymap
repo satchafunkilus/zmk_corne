@@ -25,6 +25,9 @@
 // Euro sign
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
+// Conditional layer
+ZMK_CONDITIONAL_LAYER(1 2, 3)
+
 &lt {
     quick-tap-ms = <125>;
 };
@@ -44,15 +47,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
                 <&kp>;
         };
     };
-/ {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        media_BT {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
-};
+
 // &kp TAB     &kp Q       &hm LGUI W   &kp F        &kp P        &kp B      &kp J      &kp L              &mt UUML U   &kp Y       &kp SEMICOLON   &kp BSPC
 //&kp LCTRL   &mt AUML A  &hm LALT R   &hm LCTRL S  &hm LSHFT T  &kp G      &kp M      &hm RSHFT N        &hm RCTRL E  &hm RALT I  &mt OUML O      &kp SQT
 //&kp LSHFT   &mt DESZ Z  &kp X        &kp C        &kp D        &kp V      &kp K      &kp H              &kp COMMA    &kp DOT     &kp FSLH        &kp ESC
