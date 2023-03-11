@@ -91,7 +91,7 @@ ZMK_CONDITIONAL_LAYER(1 2, 3)
             bindings = <
             &kp ESC      &kp EXCL   &kp AT      &kp HASH    &kp DLLR    &kp PRCNT   &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp BSPC
             &kp TAB      &euro_sign &trans      &trans      &trans      &trans      &kp MINUS   &kp EQUAL   &kp LBKT        &kp RBKT  &kp PIPE  &kp GRAVE
-            &kp LSHFT    &trans     &trans      &trans      &trans      &trans      &kp UNDER   &kp PLUS    &kp LBRC        &kp RBRC  &kp BSLH  &kp TILDE
+            &kp LSHFT    &de_ae     &trans      &trans      &trans      &trans      &kp UNDER   &kp PLUS    &kp LBRC        &kp RBRC  &kp BSLH  &kp TILDE
                                                 &trans      &none       &kp SPACE   &kp RETURN  &trans      &kp RALT
             >;
         };
