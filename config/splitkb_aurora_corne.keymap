@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/german_alt.dtsi"
+#include <dt-bindings/zmk/outputs.h>
 
 // Layer names
 #define BASE    0
@@ -24,7 +25,7 @@
 #define DESZ &de_eszett 
 
 // Euro sign
-ZMK_UNICODE_SINGLE(euro_sign, N0, N1, N2, N8)
+ZMK_UNICODE_SINGLE(euro_sign, KP_N0, KP_N1, KP_N2, KP_N8)
 
 // Conditional layer
 ZMK_CONDITIONAL_LAYER(1 2, 3)
@@ -48,35 +49,68 @@ ZMK_CONDITIONAL_LAYER(1 2, 3)
                 <&kp>,
                 <&kp>;
         };
-        ut_a: umlaut_a {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Umlaute";
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            flavor = "tap-preferred";
-            bindings =
-                <&de_ae>,
-                <&kp>;
-        };
+            ut_a: umlaut_a {
+                compatible = "zmk,behavior-hold-tap";
+                label = "Umlaut ä";
+                #binding-cells = <2>;
+                tapping-term-ms = <250>;
+                quick-tap-ms = <125>;
+                global-quick-tap;
+                flavor = "tap-preferred";
+                bindings =
+                    <&de_ae>,
+                    <&kp>;
+            };
+            ut_o: umlaut_o {
+                compatible = "zmk,behavior-hold-tap";
+                label = "Umlaut ö";
+                #binding-cells = <2>;
+                tapping-term-ms = <250>;
+                quick-tap-ms = <125>;
+                global-quick-tap;
+                flavor = "tap-preferred";
+                bindings =
+                    <&de_oe>,
+                    <&kp>;
+            };
+            ut_u: umlaut_u {
+                compatible = "zmk,behavior-hold-tap";
+                label = "Umlaut ü";
+                #binding-cells = <2>;
+                tapping-term-ms = <250>;
+                quick-tap-ms = <125>;
+                global-quick-tap;
+                flavor = "tap-preferred";
+                bindings =
+                    <&de_ue>,
+                    <&kp>;
+            };
+            ut_sz: umlaut_sz {
+                compatible = "zmk,behavior-hold-tap";
+                label = "Umlaut ß";
+                #binding-cells = <2>;
+                tapping-term-ms = <250>;
+                quick-tap-ms = <125>;
+                global-quick-tap;
+                flavor = "tap-preferred";
+                bindings =
+                    <&de_eszett>,
+                    <&kp>;
+            };
     };
 
-// &kp TAB     &kp Q       &hm LGUI W   &kp F        &kp P        &kp B      &kp J      &kp L              &mt UUML U   &kp Y       &kp SEMICOLON   &kp BSPC
-//&kp LCTRL   &mt AUML A  &hm LALT R   &hm LCTRL S  &hm LSHFT T  &kp G      &kp M      &hm RSHFT N        &hm RCTRL E  &hm RALT I  &mt OUML O      &kp SQT
-//&kp LSHFT   &mt DESZ Z  &kp X        &kp C        &kp D        &kp V      &kp K      &kp H              &kp COMMA    &kp DOT     &kp FSLH        &kp ESC
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-            &kp ESC     &kp Q       &kp W       &kp F           &kp P        &kp B         &kp J      &kp L         &hm UUML U      &kp Y       &kp SEMICOLON   &kp BSPC          
-            &kp TAB     &ut_a AUML A  &hm LALT R  &hm LCTRL S     &hm LSHFT T  &kp G         &kp M      &hm RSHFT N   &hm RCTRL E     &hm RALT I  &hm OUML O      &kp SQT        
-            &kp LSHFT   &hm DESZ Z  &kp X       &kp C           &kp D        &kp V         &kp K      &kp H         &kp COMMA       &kp DOT     &kp FSLH        &kp LGUI
-                                                &kp LCTRL       &lt RAI TAB  &kp SPACE     &kp RETURN &lt LOW BSPC  &kp RALT
+            &kp ESC     &kp Q           &kp W       &kp F           &kp P        &kp B         &kp J      &kp L         &ut_u UUML U    &kp Y       &kp SEMICOLON   &kp BSPC          
+            &kp TAB     &ut_a AUML A    &hm LALT R  &hm LCTRL S     &hm LSHFT T  &kp G         &kp M      &hm RSHFT N   &hm RCTRL E     &hm RALT I  &ut_o OUML O      &kp SQT        
+            &kp LSHFT   &ut_sz DESZ Z   &kp X       &kp C           &kp D        &kp V         &kp K      &kp H         &kp COMMA       &kp DOT     &kp FSLH        &kp LGUI
+                                                    &kp LCTRL       &lt RAI TAB  &kp SPACE     &kp RETURN &lt LOW BSPC  &kp RALT
             >;
 
-//            sensor-bindings = <&inc_dec_kp undefined>;
         };
 
         raise_layer {
@@ -89,7 +123,7 @@ ZMK_CONDITIONAL_LAYER(1 2, 3)
             bindings = <
             &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6            &kp N7          &kp N8      &kp N9      &kp N0      &kp BSPC
             &none       &kp DEL     &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(Z)       &kp PRINTSCREEN   &kp LEFT        &kp DOWN    &kp UP      &kp RIGHT   &trans
-            &kp LSHFT   &none       &none       &none       &kp PRINTSCREEN   &none           &none             &kp HOME        &kp PG_DN   &kp PG_UP   &kp END     &trans 
+            &kp LSHFT   &none       &none       &none       &kp PRINTSCREEN   &none     &none             &kp HOME        &kp PG_DN   &kp PG_UP   &kp END     &trans 
                                                 &trans      &trans      &kp SPACE       &kp RETURN        &lt LOW DEL     &kp LC(LALT)
             >;
         };
@@ -111,10 +145,10 @@ ZMK_CONDITIONAL_LAYER(1 2, 3)
 
         media_BT {
             bindings = <
-            &bt BT_SEL 0  &bt BT_SEL 1  &trans  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP    &kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans
-            &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans      &kp C_PP    &kp C_VOL_DN    &kp F5  &kp F6  &kp F7  &kp F8  &trans  &trans
-            &bt BT_SEL 4  &bt BT_CLR    &trans  &trans      &trans      &kp C_MUTE      &kp F9  &kp F10  &kp F11 &kp F12  &trans  &trans
-                                                &trans      &trans      &trans          &trans  &trans  &trans
+            &bt BT_SEL 0  &bt BT_SEL 1  &out OUT_TOG    &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP    &kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans
+            &bt BT_SEL 2  &bt BT_SEL 3  &trans          &trans      &kp C_PP    &kp C_VOL_DN    &kp F5  &kp F6  &kp F7  &kp F8  &trans  &trans
+            &bt BT_SEL 4  &bt BT_CLR    &trans          &trans      &trans      &kp C_MUTE      &kp F9  &kp F10  &kp F11 &kp F12  &trans  &trans
+                                                        &trans      &trans      &trans          &trans  &trans  &trans
             >;
         };
     };
