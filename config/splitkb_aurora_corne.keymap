@@ -24,7 +24,7 @@
 #define DESZ &de_eszett 
 
 // Euro sign
-ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
+ZMK_UNICODE_SINGLE(euro_sign, N0, N1, N2, N8)
 
 // Conditional layer
 ZMK_CONDITIONAL_LAYER(1 2, 3)
@@ -71,7 +71,7 @@ ZMK_CONDITIONAL_LAYER(1 2, 3)
         default_layer {
             bindings = <
             &kp ESC     &kp Q       &kp W       &kp F           &kp P        &kp B         &kp J      &kp L         &hm UUML U      &kp Y       &kp SEMICOLON   &kp BSPC          
-            &kp TAB     &ut_a A  &hm LALT R  &hm LCTRL S     &hm LSHFT T  &kp G         &kp M      &hm RSHFT N   &hm RCTRL E     &hm RALT I  &hm OUML O      &kp SQT        
+            &kp TAB     &ut_a AUML A  &hm LALT R  &hm LCTRL S     &hm LSHFT T  &kp G         &kp M      &hm RSHFT N   &hm RCTRL E     &hm RALT I  &hm OUML O      &kp SQT        
             &kp LSHFT   &hm DESZ Z  &kp X       &kp C           &kp D        &kp V         &kp K      &kp H         &kp COMMA       &kp DOT     &kp FSLH        &kp LGUI
                                                 &kp LCTRL       &lt RAI TAB  &kp SPACE     &kp RETURN &lt LOW BSPC  &kp RALT
             >;
