@@ -103,7 +103,7 @@
         default_layer {
             bindings = <
             &kp ESC     &kp Q           &kp W       &kp F           &kp P        &kp B         &kp J      &kp L         &ut_u UUML U    &kp Y       &kp SEMICOLON   &kp BSPC          
-            &kp TAB     &ut_a AUML A    &hm LALT R  &hm LCTRL S     &hm LSHFT T  &kp G         &kp M      &hm RSHFT N   &hm RCTRL E     &hm RALT I  &ut_o OUML O      &kp SQT        
+            &kp TAB     &ut_a AUML A    &hm LALT R  &hm LSHFT S     &hm LCTRL T  &kp G         &kp M      &hm RCTRL N   &hm RSHFT E     &hm RALT I  &ut_o OUML O      &kp SQT        
             &kp LSHFT   &ut_sz DESZ Z   &kp X       &kp C           &kp D        &kp V         &kp K      &kp H         &kp COMMA       &kp DOT     &kp FSLH        &kp LGUI
                                                     &kp LCTRL       &lt RAI TAB  &kp SPACE     &kp RETURN &lt LOW BSPC  &kp RALT
             >;
@@ -118,8 +118,8 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-            &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6            &kp N7          &kp N8      &kp N9      &kp N0      &kp BSPC
-            &none       &kp DEL     &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(Z)       &kp PRINTSCREEN   &kp LEFT        &kp DOWN    &kp UP      &kp RIGHT   &trans
+            &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6            &kp N7          &kp N8      &kp N9      &kp N0      &kp DOT
+            &none       &kp DEL     &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(Z)       &kp PRINTSCREEN   &kp LEFT        &kp DOWN    &kp UP      &kp RIGHT   &kp COMMA
             &kp LSHFT   &none       &none       &none       &kp PRINTSCREEN   &none     &none             &kp HOME        &kp PG_DN   &kp PG_UP   &kp END     &trans 
                                                 &trans      &trans      &kp SPACE       &kp RETURN        &lt LOW DEL     &kp LC(LALT)
             >;
@@ -134,8 +134,8 @@
 
             bindings = <
             &kp ESC      &kp EXCL   &kp AT      &kp HASH    &kp DLLR    &kp PRCNT   &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp BSPC
-            &kp TAB      &euro_sign &trans      &trans      &trans      &trans      &kp MINUS   &kp EQUAL   &kp LBKT        &kp RBKT  &kp PIPE  &kp GRAVE
-            &kp LSHFT    &de_ae     &trans      &trans      &trans      &trans      &kp UNDER   &kp PLUS    &kp LBRC        &kp RBRC  &kp BSLH  &kp TILDE
+            &kp TAB      &none      &trans      &trans      &trans      &trans      &kp MINUS   &kp EQUAL   &kp LBKT        &kp RBKT  &kp PIPE  &kp GRAVE
+            &kp LSHFT    &none      &trans      &trans      &trans      &trans      &kp UNDER   &kp PLUS    &kp LBRC        &kp RBRC  &kp BSLH  &kp TILDE
                                                 &trans      &none       &kp SPACE   &kp RETURN  &trans      &kp RALT
             >;
         };
