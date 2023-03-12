@@ -95,6 +95,18 @@
                     <&de_eszett>,
                     <&kp>;
             };
+            eur_dol: euro_dollar {
+                compatible = "zmk,behavior-hold-tap";
+                label = "Euro / Dollar";
+                #binding-cells = <2>;
+                tapping-term-ms = <250>;
+                quick-tap-ms = <125>;
+                global-quick-tap;
+                flavor = "tap-preferred";
+                bindings =
+                    <&euro_sign>,
+                    <&kp DLLR>;
+            };
     };
 
 
@@ -134,7 +146,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-            &kp ESC      &kp EXCL   &kp AT      &kp HASH    &kp DLLR    &kp PRCNT   &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp BSPC
+            &kp ESC      &kp EXCL   &kp AT      &kp HASH    &eur_dol    &kp PRCNT   &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp BSPC
             &kp TAB      &none      &trans      &trans      &trans      &trans      &kp MINUS   &kp EQUAL   &kp LBKT        &kp RBKT  &kp PIPE  &kp GRAVE
             &kp LSHFT    &none      &trans      &trans      &trans      &trans      &kp UNDER   &kp PLUS    &kp LBRC        &kp RBRC  &kp BSLH  &kp TILDE
                                                 &trans      &none       &kp SPACE   &kp RETURN  &trans      &kp RALT
