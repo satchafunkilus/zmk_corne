@@ -47,66 +47,66 @@
                 <&kp>,
                 <&kp>;
         };
-            ut_a: umlaut_a {
-                compatible = "zmk,behavior-hold-tap";
-                label = "Umlaut ä";
-                #binding-cells = <2>;
-                tapping-term-ms = <250>;
-                quick-tap-ms = <125>;
-                global-quick-tap;
-                flavor = "tap-preferred";
-                bindings =
-                    <&de_ae>,
-                    <&kp>;
-            };
-            ut_o: umlaut_o {
-                compatible = "zmk,behavior-hold-tap";
-                label = "Umlaut ö";
-                #binding-cells = <2>;
-                tapping-term-ms = <250>;
-                quick-tap-ms = <125>;
-                global-quick-tap;
-                flavor = "tap-preferred";
-                bindings =
-                    <&de_oe>,
-                    <&kp>;
-            };
-            ut_u: umlaut_u {
-                compatible = "zmk,behavior-hold-tap";
-                label = "Umlaut ü";
-                #binding-cells = <2>;
-                tapping-term-ms = <250>;
-                quick-tap-ms = <125>;
-                global-quick-tap;
-                flavor = "tap-preferred";
-                bindings =
-                    <&de_ue>,
-                    <&kp>;
-            };
-            ut_sz: umlaut_sz {
-                compatible = "zmk,behavior-hold-tap";
-                label = "Umlaut ß";
-                #binding-cells = <2>;
-                tapping-term-ms = <250>;
-                quick-tap-ms = <125>;
-                global-quick-tap;
-                flavor = "tap-preferred";
-                bindings =
-                    <&de_eszett>,
-                    <&kp>;
-            };
-            eur_dol: euro_dollar {
-                compatible = "zmk,behavior-hold-tap";
-                label = "Euro / Dollar";
-                #binding-cells = <2>;
-                tapping-term-ms = <250>;
-                quick-tap-ms = <125>;
-                global-quick-tap;
-                flavor = "tap-preferred";
-                bindings =
-                    <&euro_sign>,
-                    <&kp>;
-            };
+        ut_a: umlaut_a {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Umlaut ä";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&de_ae>,
+                <&kp>;
+        };
+        ut_o: umlaut_o {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Umlaut ö";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&de_oe>,
+                <&kp>;
+        };
+        ut_u: umlaut_u {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Umlaut ü";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&de_ue>,
+                <&kp>;
+        };
+        ut_sz: umlaut_sz {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Umlaut ß";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&de_eszett>,
+                <&kp>;
+        };
+        eur_dol: euro_dollar {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Euro / Dollar";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&euro_sign>,
+                <&kp DLLR>;
+        };
     };
 
 
@@ -146,7 +146,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-            &kp ESC      &kp EXCL   &kp AT      &kp HASH    &eur_dol DLLR   &kp PRCNT   &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp BSPC
+            &kp ESC      &kp EXCL   &kp AT      &kp HASH    &eur_dol    &kp PRCNT   &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp BSPC
             &kp TAB      &none      &trans      &trans      &trans      &trans      &kp MINUS   &kp EQUAL   &kp LBKT        &kp RBKT  &kp PIPE  &kp GRAVE
             &kp LSHFT    &none      &trans      &trans      &trans      &trans      &kp UNDER   &kp PLUS    &kp LBRC        &kp RBRC  &kp BSLH  &kp TILDE
                                                 &trans      &none       &kp SPACE   &kp RETURN  &trans      &kp RALT
