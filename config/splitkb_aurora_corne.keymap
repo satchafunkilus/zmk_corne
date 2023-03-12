@@ -18,6 +18,7 @@
 #define RAI     1
 #define LOW     2
 #define BT      3
+#define NUM     4
 
 // Umlaut as Mod-Tap
 #define AUML &de_ae 
@@ -105,7 +106,7 @@
             &kp ESC     &kp Q           &kp W       &kp F           &kp P        &kp B         &kp J      &kp L         &ut_u UUML U    &kp Y       &kp SEMICOLON   &kp BSPC          
             &kp TAB     &ut_a AUML A    &hm LALT R  &hm LSHFT S     &hm LCTRL T  &kp G         &kp M      &hm RCTRL N   &hm RSHFT E     &hm RALT I  &ut_o OUML O      &kp SQT        
             &kp LSHFT   &ut_sz DESZ Z   &kp X       &kp C           &kp D        &kp V         &kp K      &kp H         &kp COMMA       &kp DOT     &kp FSLH        &kp LGUI
-                                                    &kp LCTRL       &lt RAI TAB  &kp SPACE     &kp RETURN &lt LOW BSPC  &kp RALT
+                                                    &to NUM         &lt RAI TAB  &kp SPACE     &kp RETURN &lt LOW BSPC  &kp RALT
             >;
 
         };
@@ -119,8 +120,8 @@
 
             bindings = <
             &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6            &kp N7          &kp N8      &kp N9      &kp N0      &kp DOT
-            &none       &kp DEL     &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(Z)       &kp PRINTSCREEN   &kp LEFT        &kp DOWN    &kp UP      &kp RIGHT   &kp COMMA
-            &kp LSHFT   &none       &none       &none       &kp PRINTSCREEN   &none     &none             &kp HOME        &kp PG_DN   &kp PG_UP   &kp END     &trans 
+            &none       &kp DEL     &trans      &trans      &trans      &kp LC(Z)       &kp PRINTSCREEN   &kp LEFT        &kp DOWN    &kp UP      &kp RIGHT   &kp COMMA
+            &kp LSHFT   &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp PRINTSCREEN   &kp LC(V) &none             &kp HOME        &kp PG_DN   &kp PG_UP   &kp END     &trans 
                                                 &trans      &trans      &kp SPACE       &kp RETURN        &lt LOW DEL     &kp LC(LALT)
             >;
         };
@@ -146,6 +147,15 @@
             &bt BT_SEL 2  &bt BT_SEL 3  &trans          &trans      &kp C_PP    &kp C_VOL_DN    &kp F5  &kp F6  &kp F7  &kp F8  &trans  &trans
             &bt BT_SEL 4  &bt BT_CLR    &trans          &trans      &trans      &kp C_MUTE      &kp F9  &kp F10  &kp F11 &kp F12  &trans  &trans
                                                         &trans      &trans      &trans          &trans  &trans  &trans
+            >;
+        };
+
+        num_block {
+            bindings = <
+            &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_PLUS   &kp KP_N7     &kp KP_N8  &kp KP_N9  &kp KP_DIVIDE &trans
+            &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_MINUS  &kp KP_N4     &kp KP_N5  &kp KP_N6  &kp DOT       &trans
+            &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_ASTERISK  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp COMMA     &trans
+                                    &to BASE    &trans     &trans          &kp RETURN    &trans        &kp KP_N0
             >;
         };
     };
