@@ -1,7 +1,8 @@
 
 
 // Euro sign
-ZMK_UNICODE_SINGLE(euro_sign, KP_N0, KP_N1, KP_N2, KP_N8)
+//ZMK_UNICODE_SINGLE(euro_sign, KP_N0, KP_N1, KP_N2, KP_N8)
+ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
 // Conditional layer
 ZMK_CONDITIONAL_LAYER(1 2, 3)
