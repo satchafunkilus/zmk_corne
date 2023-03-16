@@ -129,6 +129,17 @@
                 <&mo>,
                 <&to>;
         };
+        htsk: htsk {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold-Tap with Sticky Key";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            flavor = "tap-preferred";
+            bindings =
+                <&kp>,
+                <&sk>;
+        };
     };
 
 
@@ -139,8 +150,8 @@
             bindings = <
             &hm LG(LA(K)) ESC   &kp Q   &kp W       &kp F              &kp P        &kp B         &kp J      &kp L         &ut_u UUML U    &kp Y       &kp SEMICOLON   &kp BSPC          
             &kp TAB     &ut_a AUML A    &hm LALT R  &hm LSHFT S        &hm LCTRL T  &kp G         &kp M      &hm RCTRL N   &hm RSHFT E     &hm LALT I  &ut_o OUML O      &kp SQT        
-            &kp LSHFT   &ut_sz DESZ Z   &kp X       &kp C              &kp D        &kp V         &kp K      &kp H         &kp COMMA       &kp DOT     &kp FSLH        &kp LGUI
-                                                    &kp LC(LA(LSHFT))  &lpt RAI RAI  &kp SPACE    &kp RETURN &lt LOW BSPC  &key_repeat
+            &sk LSHFT   &ut_sz DESZ Z   &kp X       &kp C              &kp D        &kp V         &kp K      &kp H         &kp COMMA       &kp DOT     &kp FSLH        &kp LGUI
+                                             &ntsk LC(LA(LSHFT)) LSHFT &lpt RAI RAI &kp SPACE     &kp RETURN &lt LOW BSPC  &key_repeat
             >;
 
         };
