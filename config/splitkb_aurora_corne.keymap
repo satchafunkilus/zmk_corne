@@ -35,6 +35,11 @@
     quick-tap-ms = <200>;
 };
 
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+};
+
 / {
     macros {
         ppt_fp: ppt_fp {
