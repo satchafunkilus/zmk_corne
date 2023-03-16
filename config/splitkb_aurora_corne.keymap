@@ -172,7 +172,7 @@
             &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6            &kp N7          &kp N8      &kp N9      &kp N0      &kp DOT
             &ppt_fp     &kp LS(DEL) &trans      &trans      &trans      &kp LC(Z)       &kp PRINTSCREEN   &kp LEFT        &kp DOWN    &kp UP      &kp RIGHT   &kp COMMA
             &kp LSHFT   &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp PRINTSCREEN   &kp LC(V) &none             &kp HOME        &kp PG_DN   &kp PG_UP   &kp END     &trans 
-                                                &to BASE    &to NUM     &kp SPACE       &kp RETURN        &kp DEL         &trans
+                                                &to BASE    &to NUM     &kp SPACE       &kp RETURN        &lt LOW DEL     &trans
             >;
         };
 
