@@ -196,7 +196,7 @@
             &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_PLUS   &kp KP_N7     &kp KP_N8  &kp KP_N9  &kp KP_DIVIDE &trans
             &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_MINUS  &kp KP_N4     &kp KP_N5  &kp KP_N6  &kp DOT       &trans
             &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_ASTERISK  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp COMMA     &trans
-                                    &to BASE    &to media_BT &trans         &kp RETURN    &trans        &kp KP_N0
+                                    &to 0       &to 4      &trans         &kp RETURN    &trans        &kp KP_N0
             >;
         };
 
