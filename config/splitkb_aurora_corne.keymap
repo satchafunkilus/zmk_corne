@@ -18,8 +18,8 @@
 #define BASE    0
 #define RAI     1
 #define LOW     2
-#define BTM     3
-#define NUM     4
+#define NUM     3
+#define BTM     4
 
 // Umlaut as Mod-Tap
 #define AUML &de_ae 
@@ -187,7 +187,16 @@
             &kp ESC      &kp EXCL   &kp AT      &kp HASH    &eur_dol EUR DLLR   &kp PRCNT   &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp BSPC
             &kp TAB      &none      &trans      &trans      &trans              &trans      &kp MINUS   &kp EQUAL   &kp LBKT        &kp RBKT  &kp PIPE  &kp GRAVE
             &kp LSHFT    &none      &trans      &trans      &trans              &trans      &kp UNDER   &kp PLUS    &kp LBRC        &kp RBRC  &kp BSLH  &kp TILDE
-                                                &none       &none               &kp SPACE   &kp RETURN  &trans      &trans
+                                                &none       &mo RAI             &kp SPACE   &kp RETURN  &trans      &trans
+            >;
+        };
+
+        num_block {
+            bindings = <
+            &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_PLUS   &kp KP_N7     &kp KP_N8  &kp KP_N9  &kp KP_DIVIDE &trans
+            &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_MINUS  &kp KP_N4     &kp KP_N5  &kp KP_N6  &kp DOT       &trans
+            &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_ASTERISK  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp COMMA     &trans
+                                    &to BASE    &to media_BT &trans         &kp RETURN    &trans        &kp KP_N0
             >;
         };
 
@@ -200,13 +209,6 @@
             >;
         };
 
-        num_block {
-            bindings = <
-            &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_PLUS   &kp KP_N7     &kp KP_N8  &kp KP_N9  &kp KP_DIVIDE &trans
-            &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_MINUS  &kp KP_N4     &kp KP_N5  &kp KP_N6  &kp DOT       &trans
-            &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_ASTERISK  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp COMMA     &trans
-                                    &to BASE    &to BTM    &trans           &kp RETURN    &trans        &kp KP_N0
-            >;
-        };
+
     };
 };
