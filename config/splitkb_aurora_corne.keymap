@@ -151,7 +151,7 @@
             &hm LG(LA(K)) ESC   &kp Q   &kp W       &kp F              &kp P        &kp B         &kp J      &kp L         &ut_u UUML U    &kp Y       &kp SEMICOLON   &kp BSPC          
             &kp TAB     &ut_a AUML A    &hm LALT R  &hm LSHFT S        &hm LCTRL T  &kp G         &kp M      &hm RCTRL N   &hm RSHFT E     &hm LALT I  &ut_o OUML O      &kp SQT        
             &sk LSHFT   &ut_sz DESZ Z   &kp X       &kp C              &kp D        &kp V         &kp K      &kp H         &kp COMMA       &kp DOT     &kp FSLH        &kp LGUI
-                                             &ntsk LC(LA(LSHFT)) LSHFT &lpt RAI RAI &kp SPACE     &kp RETURN &lt LOW BSPC  &key_repeat
+                                             &htsk LC(LA(LSHFT)) LSHFT &lpt RAI RAI &kp SPACE     &kp RETURN &lt LOW BSPC  &key_repeat
             >;
 
         };
