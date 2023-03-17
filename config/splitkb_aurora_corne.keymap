@@ -27,6 +27,7 @@
 #define UUML &de_ue 
 #define DESZ &de_eszett 
 #define EUR  &euro_sign
+#define FOPT &ppt_fp
 
 
 
@@ -123,6 +124,18 @@
                 <&euro_sign>,
                 <&kp>;
         };
+        fpt: fpt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Fornmat painter";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&ppt_fp>,
+                <&kp>;
+        };
         lpt: layerPressToggle {
             compatible = "zmk,behavior-hold-tap";
             label = "Layer press / toggle";
@@ -156,7 +169,7 @@
             &hm LG(LA(K)) ESC   &kp Q   &kp W       &kp F              &kp P        &kp B         &kp J      &kp L         &ut_u UUML U    &kp Y       &kp SEMICOLON   &kp BSPC          
             &kp TAB     &ut_a AUML A    &hm LALT R  &hm LSHFT S        &hm LCTRL T  &kp G         &kp M      &hm RCTRL N   &hm RSHFT E     &hm LALT I  &ut_o OUML O      &kp SQT        
             &sk LSHFT   &ut_sz DESZ Z   &kp X       &kp C              &kp D        &kp V         &kp K      &kp H         &kp COMMA       &kp DOT     &kp FSLH        &kp LGUI
-                                             &htsk LC(LA(LSHFT)) LSHFT &lpt RAI RAI &kp SPACE     &kp RETURN &lt LOW BSPC  &key_repeat
+                                        &lpt RAI RAI &htsk LC(LA(LSHFT)) LSHFT &kp SPACE          &kp RETURN &lt LOW BSPC  &key_repeat
             >;
 
         };
@@ -169,10 +182,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-            &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6            &kp N7          &kp N8      &kp N9      &kp N0      &kp DOT
-            &ppt_fp     &kp LS(DEL) &trans      &trans      &trans      &kp LC(Z)       &kp PRINTSCREEN   &kp LEFT        &kp DOWN    &kp UP      &kp RIGHT   &kp COMMA
-            &kp LSHFT   &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp PRINTSCREEN   &kp LC(V) &none             &kp HOME        &kp PG_DN   &kp PG_UP   &kp END     &trans 
-                                                &to BASE    &to NUM     &kp SPACE       &kp RETURN        &lt LOW DEL     &trans
+            &kp ESC     &kp N1      &kp N2      &fpt FOPT N3 &kp N4      &kp N5          &kp N6            &kp N7          &kp N8      &kp N9      &kp N0      &kp DOT
+            &kp TAB    &kp LS(DEL) &trans       &trans       &trans      &kp LC(Z)       &kp PRINTSCREEN   &kp LEFT        &kp DOWN    &kp UP      &kp RIGHT   &kp COMMA
+            &kp LSHFT   &kp LC(Z)   &kp LC(X)   &kp LC(C)    &kp PRINTSCREEN   &kp LC(V) &none             &kp HOME        &kp PG_DN   &kp PG_UP   &kp END     &trans 
+                                                &to NUM      &to BASE    &kp SPACE       &kp RETURN        &lt LOW DEL     &trans
             >;
         };
 
@@ -187,7 +200,7 @@
             &kp ESC      &kp EXCL   &kp AT      &kp HASH    &eur_dol EUR DLLR   &kp PRCNT   &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp BSPC
             &kp TAB      &none      &trans      &trans      &trans              &trans      &kp MINUS   &kp EQUAL   &kp LBKT        &kp RBKT  &kp PIPE  &kp GRAVE
             &kp LSHFT    &none      &trans      &trans      &trans              &trans      &kp UNDER   &kp PLUS    &kp LBRC        &kp RBRC  &kp BSLH  &kp TILDE
-                                                &none       &mo RAI             &kp SPACE   &kp RETURN  &trans      &trans
+                                                &mo RAI     &none               &kp SPACE   &kp RETURN  &trans      &trans
             >;
         };
 
@@ -196,7 +209,7 @@
             &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_PLUS   &kp KP_N7     &kp KP_N8  &kp KP_N9  &kp KP_DIVIDE &trans
             &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_MINUS  &kp KP_N4     &kp KP_N5  &kp KP_N6  &kp DOT       &trans
             &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_ASTERISK  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp COMMA     &trans
-                                    &to 0    &to 5  &trans        &kp RETURN    &trans        &kp KP_N0
+                                    &to 5       &to 0      &trans        &kp RETURN    &trans        &kp KP_N0
             >;
         };
 
@@ -205,7 +218,7 @@
             &bt BT_SEL 0  &bt BT_SEL 1  &out OUT_TOG    &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP    &kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans
             &bt BT_SEL 2  &bt BT_SEL 3  &trans          &trans      &kp C_PP    &kp C_VOL_DN    &kp F5  &kp F6  &kp F7  &kp F8  &trans  &trans
             &bt BT_SEL 4  &bt BT_CLR    &trans          &trans      &trans      &kp C_MUTE      &kp F9  &kp F10  &kp F11 &kp F12  &trans  &trans
-                                                        &to BASE    &none       &trans          &trans  &trans  &trans
+                                                        &none       &none       &trans          &trans  &trans  &trans
             >;
         };
         media_BT {
@@ -213,7 +226,7 @@
             &bt BT_SEL 0  &bt BT_SEL 1  &out OUT_TOG    &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP    &kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans
             &bt BT_SEL 2  &bt BT_SEL 3  &trans          &trans      &kp C_PP    &kp C_VOL_DN    &kp F5  &kp F6  &kp F7  &kp F8  &trans  &trans
             &bt BT_SEL 4  &bt BT_CLR    &trans          &trans      &trans      &kp C_MUTE      &kp F9  &kp F10  &kp F11 &kp F12  &trans  &trans
-                                                        &to BASE    &none       &trans          &trans  &trans  &trans
+                                                        &to BASE    &to BASE    &trans          &trans  &trans  &trans
             >;
         };
 
