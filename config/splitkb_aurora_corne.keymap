@@ -3,18 +3,21 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
 //#define HOST_OS 2
+
 #include <behaviors.dtsi>
+#include "../zmk-nodefree-config/helper.h"
+
+//#include "../zmk-nodefree-config/international_chars/german_alt.dtsi"
+
+#include "../zmk-nodefree-config/international_chars/german.dtsi"
+#include "makros.dtsi"
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include "../zmk-nodefree-config/helper.h"
-//#include "../zmk-nodefree-config/international_chars/german_alt.dtsi"
-#include "../zmk-nodefree-config/international_chars/german.dtsi"
 #include <dt-bindings/zmk/outputs.h>
-#include "makros.dtsi"
 
 // Layer names
+
 #define BASE    0
 #define RAI     1
 #define LOW     2
@@ -22,14 +25,13 @@
 #define BTM     5
 
 // Umlaut as Mod-Tap
-#define AUML &de_ae 
-#define OUML &de_oe 
-#define UUML &de_ue 
-#define DESZ &de_eszett 
+
+#define AUML &de_ae
+#define OUML &de_oe
+#define UUML &de_ue
+#define DESZ &de_eszett
 #define EUR  &euro_sign
 #define FOPT &ppt_fp
-
-
 
 &lt {
     tapping-term-ms = <200>;
@@ -47,16 +49,16 @@
             label = "PPT format painter";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LALT &kp H &kp F &kp P >;
+            bindings = <&kp LALT &kp H &kp F &kp P>;
         };
     };
-    
+
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HRM";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             global-quick-tap;
             flavor = "tap-preferred";
@@ -160,18 +162,16 @@
         };
     };
 
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-            &hm LG(LA(K)) ESC   &kp Q   &kp W       &kp F              &kp P        &kp B         &kp J      &kp L         &ut_u UUML U    &kp Y       &kp SEMICOLON   &kp BSPC          
-            &kp TAB     &ut_a AUML A    &hm LALT R  &hm LSHFT S        &hm LCTRL T  &kp G         &kp M      &hm RCTRL N   &hm RSHFT E     &hm LALT I  &ut_o OUML O      &kp SQT        
-            &sk LSHFT   &ut_sz DESZ Z   &kp X       &kp C              &kp D        &kp V         &kp K      &kp H         &kp COMMA       &kp DOT     &kp FSLH        &kp LGUI
-                                        &lpt RAI RAI &htsk LC(LA(LSHFT)) LSHFT &kp SPACE          &kp RETURN &lt LOW BSPC  &key_repeat
+&hm LG(LA(K)) ESC          &kp Q       &kp W                                &kp F        &kp P      &kp B         &kp J         &kp L  &ut_u UUML U       &kp Y  &kp SEMICOLON  &kp BSPC
+          &kp TAB   &ut_a AUML A  &hm LALT R                          &hm LSHFT S  &hm LCTRL T      &kp G         &kp M   &hm RCTRL N   &hm RSHFT E  &hm LALT I   &ut_o OUML O   &kp SQT
+        &sk LSHFT  &ut_sz DESZ Z       &kp X                                &kp C        &kp D      &kp V         &kp K         &kp H     &kp COMMA     &kp DOT       &kp FSLH  &kp LGUI
+                                              &htsk LC(LA(LEFT_SHIFT)) LEFT_SHIFT     &lpt 1 1  &kp SPACE    &kp RETURN  &lt LOW BSPC   &key_repeat
             >;
-
         };
 
         raise_layer {
@@ -182,10 +182,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-            &kp ESC     &kp N1      &kp N2      &fpt FOPT N3 &kp N4      &kp N5          &kp N6            &kp N7          &kp N8      &kp N9      &kp N0      &kp DOT
-            &kp TAB    &kp LS(DEL) &trans       &trans       &trans      &kp LC(Z)       &kp PRINTSCREEN   &kp LEFT        &kp DOWN    &kp UP      &kp RIGHT   &kp COMMA
-            &kp LSHFT   &kp LC(Z)   &kp LC(X)   &kp LC(C)    &kp PRINTSCREEN   &kp LC(V) &none             &kp HOME        &kp PG_DN   &kp PG_UP   &kp END     &trans 
-                                                &to NUM      &to BASE    &kp SPACE       &kp RETURN        &lt LOW DEL     &trans
+  &kp ESC       &kp N1     &kp N2  &fpt FOPT N3           &kp N4     &kp N5             &kp N6       &kp N7     &kp N8     &kp N9     &kp N0    &kp DOT
+  &kp TAB  &kp LS(DEL)     &trans        &trans           &trans  &kp LC(Z)    &kp PRINTSCREEN     &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT  &kp COMMA
+&kp LSHFT    &kp LC(Z)  &kp LC(X)     &kp LC(C)  &kp PRINTSCREEN  &kp LC(V)              &none     &kp HOME  &kp PG_DN  &kp PG_UP    &kp END     &trans
+                                          &to 0            &to 3  &kp SPACE         &kp RETURN  &lt LOW DEL     &trans
             >;
         };
 
@@ -197,38 +197,38 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-            &kp ESC      &kp EXCL   &kp AT      &kp HASH    &eur_dol EUR DLLR   &kp PRCNT   &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp BSPC
-            &kp TAB      &none      &trans      &trans      &trans              &trans      &kp MINUS   &kp EQUAL   &kp LBKT        &kp RBKT  &kp PIPE  &kp GRAVE
-            &kp LSHFT    &none      &trans      &trans      &trans              &trans      &kp UNDER   &kp PLUS    &kp LBRC        &kp RBRC  &kp BSLH  &kp TILDE
-                                                &mo RAI     &none               &kp SPACE   &kp RETURN  &trans      &trans
+  &kp ESC  &kp EXCL  &kp AT  &kp HASH  &eur_dol EUR DLLR  &kp PRCNT     &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR   &kp BSPC
+  &kp TAB     &none  &trans    &trans             &trans     &trans     &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp PIPE  &kp GRAVE
+&kp LSHFT     &none  &trans    &trans             &trans     &trans     &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp BSLH  &kp TILDE
+                               &trans              &mo 1  &kp SPACE    &kp RETURN     &trans  &mt LS(DEL) DEL
             >;
         };
 
         num_block {
             bindings = <
-            &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_PLUS   &kp KP_N7     &kp KP_N8  &kp KP_N9  &kp KP_DIVIDE &trans
-            &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_MINUS  &kp KP_N4     &kp KP_N5  &kp KP_N6  &kp DOT       &trans
-            &trans  &trans  &trans  &trans      &trans     &trans           &kp KP_ASTERISK  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp COMMA     &trans
-                                    &to 5       &to 0      &trans        &kp RETURN    &trans        &kp KP_N0
+&trans  &trans  &trans  &trans  &trans  &trans        &kp KP_PLUS  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_DIVIDE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &kp KP_MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6        &kp DOT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_ASTERISK  &kp KP_N1  &kp KP_N2  &kp KP_N3      &kp COMMA  &trans
+                         &to 0   &to 5  &trans         &kp RETURN     &trans  &kp KP_N0
             >;
         };
 
         media_tri {
             bindings = <
-            &bt BT_SEL 0  &bt BT_SEL 1  &out OUT_TOG    &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP    &kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans
-            &bt BT_SEL 2  &bt BT_SEL 3  &trans          &trans      &kp C_PP    &kp C_VOL_DN    &kp F5  &kp F6  &kp F7  &kp F8  &trans  &trans
-            &bt BT_SEL 4  &bt BT_CLR    &trans          &trans      &trans      &kp C_MUTE      &kp F9  &kp F10  &kp F11 &kp F12  &trans  &trans
-                                                        &none       &none       &trans          &trans  &trans  &trans
-            >;
-        };
-        media_BT {
-            bindings = <
-            &bt BT_SEL 0  &bt BT_SEL 1  &out OUT_TOG    &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP    &kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans
-            &bt BT_SEL 2  &bt BT_SEL 3  &trans          &trans      &kp C_PP    &kp C_VOL_DN    &kp F5  &kp F6  &kp F7  &kp F8  &trans  &trans
-            &bt BT_SEL 4  &bt BT_CLR    &trans          &trans      &trans      &kp C_MUTE      &kp F9  &kp F10  &kp F11 &kp F12  &trans  &trans
-                                                        &to BASE    &to BASE    &trans          &trans  &trans  &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &out OUT_TOG  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP    &kp F1   &kp F2   &kp F3   &kp F4  &trans  &trans
+&bt BT_SEL 2  &bt BT_SEL 3        &trans      &trans    &kp C_PP  &kp C_VOL_DN    &kp F5   &kp F6   &kp F7   &kp F8  &trans  &trans
+&bt BT_SEL 4    &bt BT_CLR        &trans      &trans      &trans    &kp C_MUTE    &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans
+                                               &none       &none        &trans    &trans   &trans   &trans
             >;
         };
 
+        media_BT {
+            bindings = <
+&bt BT_SEL 0  &bt BT_SEL 1  &out OUT_TOG  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP    &kp F1   &kp F2   &kp F3   &kp F4  &trans  &trans
+&bt BT_SEL 2  &bt BT_SEL 3        &trans      &trans    &kp C_PP  &kp C_VOL_DN    &kp F5   &kp F6   &kp F7   &kp F8  &trans  &trans
+&bt BT_SEL 4    &bt BT_CLR        &trans      &trans      &trans    &kp C_MUTE    &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans
+                                            &to BASE    &to BASE        &trans    &trans   &trans   &trans
+            >;
+        };
     };
 };
