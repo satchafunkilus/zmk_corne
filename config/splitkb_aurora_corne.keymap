@@ -172,6 +172,12 @@
             key-positions = <24 35>;
             layers = <0 1>;
         };
+
+        new_combo {
+            bindings = <&tog 4>;
+            key-positions = <40 41>;
+            layers = <0 4 1>;
+        };
     };
 
     keymap {
