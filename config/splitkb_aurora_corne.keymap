@@ -158,7 +158,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             flavor = "tap-preferred";
-            bindings 
+            bindings =
                 <&kp>,
                 <&sk>;
         };
