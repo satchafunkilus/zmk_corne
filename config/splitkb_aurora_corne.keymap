@@ -180,7 +180,7 @@
             &kp ESC         &none           &none      &ppt_fp    &none            &none            &kp K_REDO       &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO  &none
             &kp TAB         &kp LS(DEL)     &kp LALT   &kp LSHFT  &kp LCTRL        &kp LC(Z)        &kp PRINTSCREEN  &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &none
             &kp LSHFT       &kp LC(Z)       &kp LC(X)  &kp LC(C)  &kp PRINTSCREEN  &kp LC(V)        &kp INS          &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none
-                                                       &none      &none            &none            &kp RETURN       &lt LOW DEL &trans
+                                                       &none      &none            &none            &kp RETURN       &kp DEL     &none
             >;
 
             label = "nav";
