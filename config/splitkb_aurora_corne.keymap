@@ -140,16 +140,16 @@
                 <&ppt_fp>,
                 <&kp>;
         };
-        lpt: layerPressToggle {
+        ltsl: layerTapSL {
             compatible = "zmk,behavior-hold-tap";
-            label = "Layer press / toggle";
+            label = "Layer toggle / sticky layer";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             flavor = "tap-preferred";
             bindings =
                 <&mo>,
-                <&to>;
+                <&sl>;
         };
         htsk: htsk {
             compatible = "zmk,behavior-hold-tap";
@@ -172,8 +172,10 @@
             &hm LG(LA(K)) ESC   &kp Q           &kp W        &kp F        &kp P         &kp B          &kp J        &kp L           &ut_u UUML U    &kp Y        &kp SEMICOLON  &kp BSPC
             &kp TAB             &ut_a AUML A    &hm LALT R   &hm LSHFT S  &hm LCTRL T   &kp G          &kp M        &hm RCTRL N     &hm RSHFT E     &hm LALT I   &ut_o OUML O   &kp SQT
             &caps_word          &ut_sz DESZ Z   &kp X        &kp C        &kp D         &kp V          &kp K        &kp H           &kp COMMA       &kp DOT      &kp FSLH       &kp LGUI
-                                                             &lt FUN TAB  &lt NAV SPACE &sl UML        &kp ENTER    &lt NUM BSPC    &lt SYM DEL
+                                                             &lt FUN TAB  &ltsl NAV UML &kp SPACE      &kp ENTER    &lt NUM BSPC    &lt SYM DEL
             >;
+
+            label = "base";
         };
 
         nav_layer {
@@ -184,7 +186,7 @@
                                                        &none      &none            &none            &kp RETURN       &kp DEL     &none
             >;
 
-            label = "nav";
+            label = "navi";
         };
 
         symbol_layer {
@@ -195,7 +197,7 @@
                                                             &none           &kp SPACE   &none         &none       &none       &none
             >;
 
-            label = "sym";
+            label = "symbol";
         };
 
         num_layer {
@@ -217,18 +219,18 @@
                                                         &none       &none       &none           &none    &none    &none   
             >;
 
-            label = "fun";
+            label = "function";
         };
 
         umlaut_layer {
             bindings = <
-            &none     &none    &none       &none       &none     &none              &none     &none    &de_ue      &none       &none     &none 
-            &none     &de_ae   &de_eszett  &none       &none     &none              &none     &none    &euro_sign  &none       &de_oe    &none 
-            &none     &none    &none       &none       &none     &none              &none     &none    &none       &none       &none     &none 
-                                           &none       &none     &none              &none     &none    &none  
+            &trans    &trans   &trans      &trans      &trans    &trans             &trans    &trans   &de_ue      &trans      &trans    &trans 
+            &trans    &de_ae   &trans      &de_eszett  &trans    &trans             &trans    &trans   &euro_sign  &trans      &de_oe    &trans 
+            &trans    &trans   &trans      &trans      &trans    &trans             &trans    &trans   &trans      &trans      &trans    &trans
+                                           &trans      &trans    &trans             &trans    &trans   &trans 
             >;
 
-            label = "uml";
+            label = "umlaut";
         };
 
         qwertz_layer {
@@ -236,8 +238,9 @@
             &hm LG(LA(K)) ESC   &kp Q           &kp W        &kp E        &kp R         &kp T         &ut_sz DESZ Z &ut_u UUML U   &kp I         &ut_o OUML O &kp P       &kp BSPC
             &kp TAB             &ut_a AUML A    &hm LALT S   &hm LSHFT D  &hm LCTRL F   &kp G         &kp H        &hm RCTRL J     &hm RSHFT K   &hm LALT L   &kp SEMI    &kp SQT
             &sk LSHFT           &kp Y           &kp X        &kp C        &kp V         &kp B         &kp N        &kp M           &kp COMMA     &kp DOT      &kp FSLH   &kp LGUI
-                                                             &lt FUN ESC  &lt NAV SPACE &kp SPACE     &kp ENTER    &lt NUM BSPC    &lt SYM DEL
+                                                             &lt FUN ESC  &mo NAV       &kp SPACE     &kp ENTER    &lt NUM BSPC    &lt SYM DEL
             >;
+            label = "qwertz";
         };
     };
 };
