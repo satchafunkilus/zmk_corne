@@ -68,6 +68,18 @@
                 <&kp>,
                 <&kp>;
         };
+        hmnqt: homerow_mods_noqt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            //global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&kp>,
+                <&kp>;
+        };
         ut_a: umlaut_a {
             compatible = "zmk,behavior-hold-tap";
             label = "Umlaut ä";
@@ -173,10 +185,22 @@
             layers = <0 1>;
         };
 
-        new_combo {
+        tog_num {
             bindings = <&tog 4>;
             key-positions = <40 41>;
             layers = <0 4 1>;
+        };
+
+        caps_word_combo {
+            bindings = <&caps_word>;
+            key-positions = <15 20>;
+            layers = <0 1>;
+        };
+
+        escape {
+            bindings = <&hm LG(LA(K)) ESC>;
+            key-positions = <0 1>;
+            layers = <0 1 4>;
         };
     };
 
@@ -185,10 +209,10 @@
 
         default_layer {
             bindings = <
-&hm LG(LA(K)) ESC          &kp Q       &kp W        &kp F          &kp P      &kp B        &kp J         &kp L  &ut_u UUML U       &kp Y  &kp SEMICOLON  &kp BSPC
-          &kp TAB   &ut_a AUML A  &hm LALT R  &hm LSHFT S    &hm LCTRL T      &kp G        &kp M   &hm RCTRL N   &hm RSHFT E  &hm LALT I   &ut_o OUML O   &kp SQT
-       &caps_word  &ut_sz DESZ Z       &kp X        &kp C          &kp D      &kp V        &kp K         &kp H     &kp COMMA     &kp DOT       &kp FSLH  &kp LGUI
-                                              &lt FUN TAB  &ltsl NAV UML  &kp SPACE    &kp ENTER  &lt NUM BSPC   &lt SYM DEL
+            &hm LG(LA(K)) ESC   &kp Q           &kp W        &kp F          &kp P           &kp B        &kp J         &kp L  &ut_u UUML U       &kp Y  &kp SEMICOLON  &kp BSPC
+            &kp TAB             &ut_a AUML A    &hm LALT R   &hmnqt LSHFT S &hm LCTRL T     &kp G        &kp M   &hm RCTRL N   &hmnqt RSHFT E  &hm LALT I   &ut_o OUML O   &kp SQT
+            &caps_word          &ut_sz DESZ Z   &kp X        &kp C          &kp D           &kp V        &kp K         &kp H     &kp COMMA     &kp DOT       &kp FSLH  &kp LGUI
+                                                &lt FUN TAB  &ltsl NAV UML  &kp SPACE       &kp ENTER  &lt NUM BSPC   &lt SYM DEL
             >;
 
             label = "base";
@@ -196,10 +220,10 @@
 
         qwertz_layer {
             bindings = <
-&hm LG(LA(K)) ESC         &kp Q       &kp W        &kp E        &kp R      &kp T    &ut_sz DESZ Z  &ut_u UUML U        &kp I  &ut_o OUML O     &kp P  &kp BSPC
-          &kp TAB  &ut_a AUML A  &hm LALT S  &hm LSHFT D  &hm LCTRL F      &kp G            &kp H   &hm RCTRL J  &hm RSHFT K    &hm LALT L  &kp SEMI   &kp SQT
-        &sk LSHFT         &kp Y       &kp X        &kp C        &kp V      &kp B            &kp N         &kp M    &kp COMMA       &kp DOT  &kp FSLH  &kp LGUI
-                                             &lt FUN ESC      &mo NAV  &kp SPACE        &kp ENTER  &lt NUM BSPC  &lt SYM DEL
+            &hm LG(LA(K)) ESC   &kp Q           &kp W           &kp E           &kp R            &kp T    &ut_sz DESZ Z  &ut_u UUML U        &kp I  &ut_o OUML O     &kp P  &kp BSPC
+            &kp TAB             &ut_a AUML A    &hm LALT S      &hmnqt LSHFT D  &hm LCTRL F      &kp G            &kp H   &hm RCTRL J  &hmnqt RSHFT K    &hm LALT L  &kp SEMI   &kp SQT
+            &sk LSHFT           &kp Y           &kp X           &kp C           &kp V            &kp B            &kp N         &kp M    &kp COMMA       &kp DOT  &kp FSLH  &kp LGUI
+                                                &lt FUN ESC     &mo NAV         &kp SPACE        &kp ENTER  &lt NUM BSPC  &lt SYM DEL
             >;
 
             label = "qwertz";
