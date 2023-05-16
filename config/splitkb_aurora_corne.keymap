@@ -242,9 +242,9 @@
 
         symbol_layer {
             bindings = <
-  &kp ESC      &kp KP_PLUS           &kp AMPS  &kp KP_MULTIPLY   &kp LPAR  &kp RPAR    &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR   &kp BSPC
-  &kp TAB     &kp KP_MINUS  &eur_dol EUR DLLR        &kp PRCNT  &kp CARET    &trans    &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp PIPE  &kp GRAVE
-&kp LSHFT  &kp KP_ASTERISK           &kp EXCL           &kp AT   &kp HASH    &trans    &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp BSLH  &kp TILDE
+  &kp ESC      &kp KP_PLUS           &kp EXCL           &kp AT   &kp HASH     &none    &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR   &kp BSPC
+  &kp TAB     &kp KP_MINUS  &eur_dol EUR DLLR        &kp PRCNT  &kp CARET     &none    &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp PIPE  &kp GRAVE
+&kp LSHFT  &kp KP_ASTERISK           &kp AMPS  &kp KP_MULTIPLY   &kp LPAR  &kp RPAR    &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp BSLH  &kp TILDE
                                                          &none  &kp SPACE     &none        &none      &none            &none
             >;
 
@@ -253,10 +253,10 @@
 
         num_layer {
             bindings = <
-&tog NUM      &kp KP_PLUS  &kp N7      &kp N8  &kp N9  &kp KP_DIVIDE    &none      &none      &none     &none  &none  &none
-  &trans     &kp KP_MINUS  &kp N4      &kp N5  &kp N6        &kp DOT    &none  &kp RCTRL  &kp RSHFT  &kp RALT  &none  &none
-  &trans  &kp KP_ASTERISK  &kp N1      &kp N2  &kp N3      &kp COMMA    &none      &none      &none     &none  &none  &none
-                                   &kp DELETE  &kp N0     &kp RETURN    &none   &tog NUM      &none
+&tog NUM      &kp KP_PLUS  &kp N1  &kp NUMBER_2  &kp N3  &kp KP_DIVIDE    &none      &none      &none     &none  &none  &none
+  &trans     &kp KP_MINUS  &kp N4        &kp N5  &kp N6        &kp DOT    &none  &kp RCTRL  &kp RSHFT  &kp RALT  &none  &none
+  &trans  &kp KP_ASTERISK  &kp N7        &kp N8  &kp N9      &kp COMMA    &none      &none      &none     &none  &none  &none
+                                     &kp DELETE  &kp N0     &kp RETURN    &none   &tog NUM      &none
             >;
 
             label = "num";
