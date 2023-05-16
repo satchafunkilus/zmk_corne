@@ -210,7 +210,7 @@
         default_layer {
             bindings = <
             &hm LG(LA(K)) ESC   &kp Q           &kp W        &kp F          &kp P           &kp B        &kp J         &kp L  &ut_u UUML U       &kp Y  &kp SEMICOLON  &kp BSPC
-            &kp TAB             &ut_a AUML A    &hm LALT R   &hmnqt LSHFT S &hm LCTRL T     &kp G        &kp M   &hm RCTRL N   &hmnqt RSHFT E  &hm LALT I   &ut_o OUML O   &kp SQT
+            &kp TAB             &hm RGUI A    &hm LALT R   &hmnqt LSHFT S &hm LCTRL T     &kp G        &kp M   &hm RCTRL N   &hmnqt RSHFT E  &hm LALT I   &hm LGUI O   &kp SQT
             &caps_word          &ut_sz DESZ Z   &kp X        &kp C          &kp D           &kp V        &kp K         &kp H     &kp COMMA     &kp DOT       &kp FSLH  &kp LGUI
                                                 &lt FUN TAB  &ltsl NAV UML  &kp SPACE       &kp ENTER  &lt NUM BSPC   &lt SYM DEL
             >;
