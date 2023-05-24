@@ -72,7 +72,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HRML";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <350>;
             quick-tap-ms = <125>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
@@ -83,7 +83,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HRMR";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <350>;
             quick-tap-ms = <125>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
