@@ -36,8 +36,8 @@
 #define EUR  &euro_sign
 #define FOPT &ppt_fp
 
-#define ___ &none
-#define ooo oooo
+#define ___     &none
+#define oooo    &trans
 
 #include "makros.dtsi"
 
