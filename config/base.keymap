@@ -35,11 +35,7 @@
 #define EUR  &euro_sign
 #define FOPT &ppt_fp
 
-// Alt+Tab swapper, requires PR #1366
-ZMK_BEHAVIOR(swapper, tri_state,
-bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-ignored-key-positions = <LT2>;
-)
+
 
 &lt {
     tapping-term-ms = <200>;

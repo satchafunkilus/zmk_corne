@@ -6,3 +6,9 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
 // Conditional layer
 //ZMK_CONDITIONAL_LAYER(1 2, 4)
+
+// Alt+Tab swapper, requires PR #1366
+ZMK_BEHAVIOR(swapper, tri_state,
+bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+ignored-key-positions = <LT2>;
+)
