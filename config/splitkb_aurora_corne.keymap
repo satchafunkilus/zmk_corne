@@ -160,7 +160,7 @@
             flavor = "tap-preferred";
             bindings =
                 <&euro_sign>,
-                <&kp DOLLAR>;
+                <&kp>;
         };
         fpt: fpt {
             compatible = "zmk,behavior-hold-tap";
