@@ -5,12 +5,12 @@
  */
 //#define HOST_OS 2
 
-
+#include <behaviors.dtsi>
 #include "../zmk-nodefree-config/helper.h"
 
 //#include "../zmk-nodefree-config/international_chars/german_alt.dtsi"
-
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
+
 #include "makros.dtsi"
 #include "behaviors.dtsi"
 #include <dt-bindings/zmk/keys.h>
@@ -248,11 +248,11 @@
         default_layer {
             bindings = <
             //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ 
-            &hm LG(LA(K)) ESC   &kp Q          &kp W        &kp F          &kp P           &kp B            &kp J       &kp L         &ut_u UUML U  &kp Y        &kp SEMICOLON   &kp BSPC
+            &hm LG(LA(K)) ESC   &kp Q          &kp W        &kp F          &kp P         &kp B              &kp J       &kp L         &kp U         &kp Y        &kp SEMICOLON   &kp BSPC
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &kp TAB         &hml RGUI A    &hml LALT R  &hml LSHFT S   &hml LCTRL T    &kp G            &kp M       &hmr RCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O    &kp SQT
+                &kp TAB         &hml RGUI A    &hml LALT R  &hml LSHFT S   &hml LCTRL T  &kp G              &kp M       &hmr RCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O    &kp SQT
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &caps_word     &ut_sz DESZ Z   &kp X        &kp C          &kp D           &kp V            &kp K       &kp H         &kp COMMA     &kp DOT       &kp FSLH       &kp LGUI
+                &caps_word     &ut_sz DESZ Z   &kp X        &kp C          &kp D         &kp V              &kp K       &kp H         &kp COMMA     &kp DOT       &kp FSLH       &kp LGUI
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                              &lt FUN TAB  &ltsl NAV UML  &kp SPACE          &kp ENTER   &lt NUM BSPC  &lt SYM DEL
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
@@ -264,13 +264,13 @@
         qwertz_layer {
             bindings = <
             //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ 
-            &hm LG(LA(K)) ESC   &kp Q          &kp W           &kp E         &kp R         &kp T         &ut_sz DESZ Z  &ut_u UUML U     &kp I      &ut_o OUML O    &kp P       &kp BSPC
+            &hm LG(LA(K)) ESC   &kp Q          &kp W         &kp E         &kp R         &kp T            &ut_sz DESZ Z  &kp U         &kp I         &kp O        &kp P         &kp BSPC
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-            &kp TAB             &ut_a AUML A   &hml LALT S     &hml LSHFT D  &hml LCTRL F     &kp G            &kp H     &hmr RCTRL J    &hmr RSHFT K    &hmr LALT L     &kp SEMI    &kp SQT
+            &kp TAB             &kp A          &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G            &kp H          &hmr RCTRL J  &hmr RSHFT K  &hmr LALT L  &kp SEMI      &kp SQT
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-            &sk LSHFT           &kp Y           &kp X           &kp C           &kp V            &kp B            &kp N     &kp M           &kp COMMA       &kp DOT         &kp FSLH    &kp LGUI
+            &sk LSHFT           &kp Y          &kp X         &kp C         &kp V         &kp B            &kp N          &kp M         &kp COMMA     &kp DOT      &kp FSLH      &kp LGUI
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                         &lt FUN ESC     &mo NAV         &kp SPACE        &kp ENTER  &lt NUM BSPC  &lt SYM DEL
+                                                            &lt FUN TAB    &ltsl NAV UML &kp SPACE        &kp ENTER      &lt NUM BSPC  &lt SYM DEL
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 
