@@ -62,18 +62,6 @@ ignored-key-positions = <LT2>;
     };
 
     behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRM";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
-        };
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HRML";
@@ -96,66 +84,6 @@ ignored-key-positions = <LT2>;
             hold-trigger-key-positions = <0 1 2 3 4 5 6 12 13 14 15 16 17 18 24 25 26 27 28 29 30 36 37 38>;
             hold-trigger-on-release;
         };
-        hmnqt: homerow_mods_noqt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRM";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            //global-quick-tap;
-            flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
-        };
-        ut_a: umlaut_a {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Umlaut ä";
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            flavor = "tap-preferred";
-            bindings =
-                <&de_ae>,
-                <&kp>;
-        };
-        ut_o: umlaut_o {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Umlaut ö";
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            flavor = "tap-preferred";
-            bindings =
-                <&de_oe>,
-                <&kp>;
-        };
-        ut_u: umlaut_u {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Umlaut ü";
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            flavor = "tap-preferred";
-            bindings =
-                <&de_ue>,
-                <&kp>;
-        };
-        ut_sz: umlaut_sz {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Umlaut ß";
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            flavor = "tap-preferred";
-            bindings =
-                <&de_eszett>,
-                <&kp>;
-        };
         eur_dol: euro_dollar {
             compatible = "zmk,behavior-hold-tap";
             label = "Euro / Dollar";
@@ -166,18 +94,6 @@ ignored-key-positions = <LT2>;
             flavor = "tap-preferred";
             bindings =
                 <&euro_sign>,
-                <&kp>;
-        };
-        fpt: fpt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Fornmat painter";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            flavor = "tap-preferred";
-            bindings =
-                <&ppt_fp>,
                 <&kp>;
         };
         ltsl: layerTapSL {
@@ -257,7 +173,7 @@ ignored-key-positions = <LT2>;
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                 &kp TAB         &hml RGUI A    &hml LALT R  &hml LSHFT S   &hml LCTRL T  &kp G              &kp M       &hmr RCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O    &kp SQT
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &caps_word     &ut_sz DESZ Z   &kp X        &kp C          &kp D         &kp V              &kp K       &kp H         &kp COMMA     &kp DOT       &kp FSLH       &kp LGUI
+                &caps_word      &kp Z          &kp X        &kp C          &kp D         &kp V              &kp K       &kp H         &kp COMMA     &kp DOT       &kp FSLH       &kp LGUI
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                              &lt FUN TAB  &ltsl NAV UML  &kp SPACE          &kp ENTER   &lt NUM BSPC  &lt SYM DEL
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 

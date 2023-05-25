@@ -1,0 +1,88 @@
+// This file is used as a repository for created behaviors that are currently not used, to keep the actual keymap file cleaner
+
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&kp>,
+                <&kp>;
+        };
+
+        hmnqt: homerow_mods_noqt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            //global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&kp>,
+                <&kp>;
+        };
+
+      fpt: fpt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Fornmat painter";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&ppt_fp>,
+                <&kp>;
+        };
+        ut_a: umlaut_a {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Umlaut ä";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&de_ae>,
+                <&kp>;
+        };
+        ut_o: umlaut_o {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Umlaut ö";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&de_oe>,
+                <&kp>;
+        };
+        ut_u: umlaut_u {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Umlaut ü";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&de_ue>,
+                <&kp>;
+        };
+        ut_sz: umlaut_sz {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Umlaut ß";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings =
+                <&de_eszett>,
+                <&kp>;
+        };
