@@ -5,7 +5,7 @@
  */
 //#define HOST_OS 2
 
-#include <behaviors.dtsi>
+#include "behaviors.dtsi"
 #include "../zmk-nodefree-config/helper.h"
 
 //#include "../zmk-nodefree-config/international_chars/german_alt.dtsi"
