@@ -160,7 +160,7 @@
             flavor = "tap-preferred";
             bindings =
                 <&euro_sign>,
-                <&kp>;
+                <&kp DOLLAR>;
         };
         fpt: fpt {
             compatible = "zmk,behavior-hold-tap";
@@ -246,10 +246,15 @@
 
         default_layer {
             bindings = <
-            &hm LG(LA(K)) ESC   &kp Q           &kp W        &kp F          &kp P           &kp B        &kp J        &kp L         &ut_u UUML U  &kp Y         &kp SEMICOLON   &kp BSPC
-            &kp TAB             &hml RGUI A     &hml LALT R  &hml LSHFT S   &hml LCTRL T    &kp G        &kp M        &hmr RCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O     &kp SQT
-            &caps_word          &ut_sz DESZ Z   &kp X        &kp C          &kp D           &kp V        &kp K        &kp H         &kp COMMA     &kp DOT       &kp FSLH        &kp LGUI
-                                                &lt FUN TAB  &ltsl NAV UML  &kp SPACE       &kp ENTER  &lt NUM BSPC   &lt SYM DEL
+            //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ 
+            &hm LG(LA(K)) ESC   &kp Q          &kp W        &kp F          &kp P           &kp B            &kp J       &kp L         &ut_u UUML U  &kp Y        &kp SEMICOLON   &kp BSPC
+            //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &kp TAB         &hml RGUI A    &hml LALT R  &hml LSHFT S   &hml LCTRL T    &kp G            &kp M       &hmr RCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O    &kp SQT
+            //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &caps_word     &ut_sz DESZ Z   &kp X        &kp C          &kp D           &kp V            &kp K       &kp H         &kp COMMA     &kp DOT       &kp FSLH       &kp LGUI
+            //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                             &lt FUN TAB  &ltsl NAV UML  &kp SPACE          &kp ENTER   &lt NUM BSPC  &lt SYM DEL
+            //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 
             label = "base";
@@ -257,10 +262,15 @@
 
         qwertz_layer {
             bindings = <
-            &hm LG(LA(K)) ESC   &kp Q           &kp W           &kp E           &kp R            &kp T    &ut_sz DESZ Z     &ut_u UUML U    &kp I           &ut_o OUML O    &kp P       &kp BSPC
-            &kp TAB             &ut_a AUML A    &hml LALT S     &hml LSHFT D    &hml LCTRL F     &kp G            &kp H     &hmr RCTRL J    &hmr RSHFT K    &hmr LALT L     &kp SEMI    &kp SQT
+            //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ 
+            &hm LG(LA(K)) ESC   &kp Q          &kp W           &kp E         &kp R         &kp T         &ut_sz DESZ Z  &ut_u UUML U     &kp I      &ut_o OUML O    &kp P       &kp BSPC
+            //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+            &kp TAB             &ut_a AUML A   &hml LALT S     &hml LSHFT D  &hml LCTRL F     &kp G            &kp H     &hmr RCTRL J    &hmr RSHFT K    &hmr LALT L     &kp SEMI    &kp SQT
+            //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             &sk LSHFT           &kp Y           &kp X           &kp C           &kp V            &kp B            &kp N     &kp M           &kp COMMA       &kp DOT         &kp FSLH    &kp LGUI
-                                                &lt FUN ESC     &mo NAV         &kp SPACE        &kp ENTER  &lt NUM BSPC  &lt SYM DEL
+            //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                         &lt FUN ESC     &mo NAV         &kp SPACE        &kp ENTER  &lt NUM BSPC  &lt SYM DEL
+            //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 
             label = "qwertz";
@@ -268,10 +278,15 @@
 
         nav_layer {
             bindings = <
-  &kp ESC        &none      &none    &ppt_fp            &none      &none          &kp LC(Y)     &kp LC(V)   &kp LC(C)   &kp LC(X)   &kp LC(Z)   &none
-  &kp TAB  &kp LS(DEL)   &kp LALT  &kp LSHFT        &kp LCTRL  &kp LC(Z)    &kp PRINTSCREEN     &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &none
-&kp LSHFT    &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp PRINTSCREEN  &kp LC(V)            &kp INS     &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none
-                                       &none            &none      &none         &kp RETURN     &kp DEL      &none
+            //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+                &kp ESC         &none           &none       &ppt_fp        &none        &none             &kp LC(Y)     &kp LC(V)     &kp LC(C)     &kp LC(X)      &kp LC(Z)    &none
+            //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &kp TAB         &kp LS(DEL)     &kp LALT    &kp LSHFT      &kp LCTRL    &kp LC(Z)       &kp PRINTSCREEN &kp LEFT      &kp DOWN      &kp UP         &kp RIGHT    &none
+            //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &kp LSHFT       &kp LC(Z)       &kp LC(X)   &kp LC(C)   &kp PRINTSCREEN &kp LC(V)         &kp INS       &kp HOME      &kp PG_DN     &kp PG_UP      &kp END      &none
+            //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                            &none          &none        &none             &kp RETURN    &kp DEL       &none
+            //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 
             label = "navi";
@@ -279,10 +294,15 @@
 
         symbol_layer {
             bindings = <
-  &kp ESC      &kp KP_PLUS           &kp EXCL           &kp AT   &kp HASH     &none    &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR   &kp BSPC
-  &kp TAB     &kp KP_MINUS  &eur_dol EUR DLLR        &kp PRCNT  &kp CARET     &none    &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp PIPE  &kp GRAVE
-&kp LSHFT  &kp KP_ASTERISK           &kp AMPS  &kp KP_MULTIPLY   &kp LPAR  &kp RPAR    &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp BSLH  &kp TILDE
-                                                         &none  &kp SPACE     &none        &none      &none            &none
+            //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+                &kp ESC       &kp KP_PLUS      &kp EXCL       &kp AT        &kp HASH      &none            &kp CARET    &kp AMPS    &kp KP_MULTIPLY  &kp LPAR       &kp RPAR    &kp BSPC
+            //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &kp TAB       &kp KP_MINUS  &eur_dol EUR DLLR &kp PRCNT     &kp CARET     &none            &kp MINUS    &kp EQUAL      &kp LBKT      &kp RBKT       &kp PIPE    &kp GRAVE
+            //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &kp LSHFT     &kp KP_ASTERISK  &kp AMPS   &kp KP_MULTIPLY   &kp LPAR      &kp RPAR         &kp UNDER    &kp PLUS       &kp LBRC      &kp RBRC       &kp BSLH    &kp TILDE
+            //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                              &none         &kp SPACE     &none            &none        &none          &none
+            //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 
             label = "symbol";
@@ -290,10 +310,15 @@
 
         num_layer {
             bindings = <
-&tog NUM      &kp KP_PLUS  &kp N1  &kp NUMBER_2  &kp N3  &kp KP_DIVIDE    &none   &none      &none     &none  &none  &none
-  &trans     &kp KP_MINUS  &kp N4        &kp N5  &kp N6        &kp DOT    &none   &kp RCTRL  &kp RSHFT  &kp RALT  &kp RGUI  &none
-  &trans  &kp KP_ASTERISK  &kp N7        &kp N8  &kp N9      &kp COMMA    &none   &none      &none     &none  &none  &none
-                                     &kp DELETE  &kp N0     &kp RETURN    &none   &tog NUM      &none
+            //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+                &tog NUM        &kp KP_PLUS      &kp N1        &kp N2       &kp N3      &kp KP_DIVIDE       &none          &none        &none          &none         &none         &none
+            //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &trans          &kp KP_MINUS     &kp N4        &kp N5       &kp N6      &kp DOT             &none        &kp RCTRL     &kp RSHFT       &kp RALT      &kp RGUI      &none
+            //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &trans          &kp KP_ASTERISK  &kp N7        &kp N8       &kp N9      &kp COMMA           &none        &none         &none           &none         &none         &none
+            //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                            &kp DELETE      &kp N0      &kp RETURN          &none        &tog NUM      &none
+            //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 
             label = "num";
@@ -301,10 +326,15 @@
 
         function_layer {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &out OUT_TOG  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP   &kp F1   &kp F2   &kp F3   &kp F4  &none  &tog QWE
-&bt BT_SEL 2  &bt BT_SEL 3  &none         &kp LSHFT   &kp C_PP    &kp C_VOL_DN   &kp F5   &kp F6   &kp F7   &kp F8  &none  &tog NUM
-&bt BT_SEL 4  &bt BT_CLR    &none         &none       &none       &kp C_MUTE     &kp F9   &kp F10  &kp F11  &kp F12 &none  &none
-                                          &none       &none       &none          &none    &none    &none
+            //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+                &bt BT_SEL 0  &bt BT_SEL 1   &out OUT_TOG   &kp C_PREV    &kp C_NEXT    &kp C_VOL_UP        &kp F1         &kp F2        &kp F3        &kp F4        &none        &tog QWE
+            //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &bt BT_SEL 2  &bt BT_SEL 3      &none         &kp LSHFT   &kp C_PP      &kp C_VOL_DN        &kp F5         &kp F6        &kp F7        &kp F8        &none        &tog NUM
+            //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &bt BT_SEL 4  &bt BT_CLR        &none         &none       &none         &kp C_MUTE          &kp F9         &kp F10       &kp F11       &kp F12       &none        &none
+            //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                              &none       &none         &none               &none          &none         &none
+            //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 
             label = "function";
@@ -312,10 +342,15 @@
 
         umlaut_layer {
             bindings = <
-&trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans      &de_ue  &trans  &trans  &trans
-&trans  &de_ae  &trans  &de_eszett  &trans  &trans    &trans  &trans  &euro_sign  &trans  &de_oe     &kp
-&trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans      &trans  &trans  &trans  &trans
-                            &trans  &trans  &trans    &trans  &trans      &trans
+            //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+                &trans          &trans          &trans      &trans          &trans         &trans           &trans        &trans       &de_ue         &trans       &trans        &trans
+            //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &trans          &de_ae          &trans      &de_eszett      &trans         &trans           &trans        &trans       &euro_sign     &trans       &de_oe        &kp
+            //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &trans          &trans          &trans      &trans          &trans         &trans           &trans        &trans       &trans         &trans       &trans        &trans
+            //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                            &trans          &trans         &trans           &trans        &trans       &trans
+            //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 
             label = "umlaut";
