@@ -12,7 +12,6 @@
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
 
 #include "makros.dtsi"
-#include "behaviors.dtsi"
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
@@ -197,6 +196,11 @@
                 <&kp>,
                 <&sk>;
         };
+        // Alt+Tab swapper, requires PR #1366
+        ZMK_BEHAVIOR(swapper, tri_state,
+        bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+        ignored-key-positions = <LT2>;
+        )
     };
 
     combos {
