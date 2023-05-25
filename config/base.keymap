@@ -26,6 +26,7 @@
 #define FUN     5
 #define UML     6
 
+
 // Umlaut as Mod-Tap
 
 #define AUML &de_ae
@@ -35,6 +36,8 @@
 #define EUR  &euro_sign
 #define FOPT &ppt_fp
 
+#define ___ &none
+#define ooo oooo
 
 
 &lt {
@@ -66,7 +69,7 @@
             quick-tap-ms = <125>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <5 6 7 8 9 10 11 17 18 19 20 21 22 23 29 30 31 32 33 34 35 39 40 41>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
         };
         hmr: homerow_mods_right {
@@ -77,7 +80,29 @@
             quick-tap-ms = <125>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 6 12 13 14 15 16 17 18 24 25 26 27 28 29 30 36 37 38>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+        };
+        hmr_lpar_lt: hmr_lpar_lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_LPAR";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <125>;
+            flavor = "balanced";
+            bindings = <&kp>, <&lpar_lt>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+        };
+        hmr_rpar_gt: hmr_rpar_gt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_RPAR";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <125>;
+            flavor = "balanced";
+            bindings = <&kp>, <&rpar_gt>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
         eur_dol: euro_dollar {
@@ -121,19 +146,19 @@
 
         tog_qwertz {
             bindings = <&tog 1>;
-            key-positions = <24 35>;
+            key-positions = <LB5 RB5>;
             layers = <0 1>;
         };
 
         tog_num {
             bindings = <&tog 4>;
-            key-positions = <40 41>;
+            key-positions = <RH1 RH2>;
             layers = <0 4 1>;
         };
 
         caps_word_combo {
             bindings = <&caps_word>;
-            key-positions = <38 39>;
+            key-positions = <LH0 RH0>;
             layers = <0 1>;
         };
 
@@ -144,17 +169,17 @@
         };
         cut {
             bindings = <&kp LC(X)>;
-            key-positions = <26 27>;
+            key-positions = <LB3 LB2>;
             layers = <0 1>;
         };
         copy {
             bindings = <&kp LC(C)>;
-            key-positions = <27 28>;
+            key-positions = <LB2 LB1>;
             layers = <0 1>;
         };
         paste {
             bindings = <&kp LC(V)>;
-            key-positions = <28 29>;
+            key-positions = <LB1 LB0>;
             layers = <0 1>;
         };
     };
@@ -197,13 +222,13 @@
         nav_layer {
             bindings = <
             //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                &kp ESC         &none           &none       &ppt_fp        &kp LS(TAB)  &swapper          &kp LC(Y)     &kp LC(V)     &kp LC(C)     &kp LC(X)      &kp LC(Z)    &none
+                &kp ESC         ___             ___         &ppt_fp        &kp LS(TAB)  &swapper          &kp LC(Y)     &kp LC(V)     &kp LC(C)     &kp LC(X)      &kp LC(Z)      ___
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &kp TAB         &kp LS(DEL)     &kp LALT    &kp LSHFT      &kp LCTRL    &kp LC(Z)       &kp PRINTSCREEN &kp LEFT      &kp DOWN      &kp UP         &kp RIGHT    &none
+                &kp TAB         &kp LS(DEL)     &kp LALT    &kp LSHFT      &kp LCTRL    &kp LC(Z)       &kp PRINTSCREEN &kp LEFT      &kp DOWN      &kp UP         &kp RIGHT      ___
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &kp LSHFT       &kp LC(Z)       &kp LC(X)   &kp LC(C)   &kp PRINTSCREEN &kp LC(V)         &kp INS       &kp HOME      &kp PG_DN     &kp PG_UP      &kp END      &none
+                &kp LSHFT       &kp LC(Z)       &kp LC(X)   &kp LC(C)   &kp PRINTSCREEN &kp LC(V)         &kp INS       &kp HOME      &kp PG_DN     &kp PG_UP      &kp END        ___
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                            &none          &none        &none             &kp RETURN    &kp DEL       &none
+                                                            ___            ___          ___               &kp RETURN    &kp DEL       ___
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 
@@ -213,13 +238,13 @@
         symbol_layer {
             bindings = <
             //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                &kp ESC       &kp KP_PLUS      &kp EXCL       &kp AT        &kp HASH      &none            &kp CARET    &kp AMPS    &kp KP_MULTIPLY  &kp LPAR       &kp RPAR    &kp BSPC
+                &kp ESC       &kp KP_PLUS      &kp EXCL       &kp AT        &kp HASH      ___              &kp CARET    &kp AMPS    &kp KP_MULTIPLY  &kp LPAR       &kp RPAR    &kp BSPC
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &kp TAB       &kp KP_MINUS  &eur_dol EUR DLLR &kp PRCNT     &kp CARET     &none            &kp MINUS    &kp EQUAL      &kp LBKT      &kp RBKT       &kp PIPE    &kp GRAVE
+                &kp TAB       &kp KP_MINUS  &eur_dol EUR DLLR &kp PRCNT     &kp CARET     ___              &kp MINUS    &kp EQUAL      &kp LBKT      &kp RBKT       &kp PIPE    &kp GRAVE
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                 &kp LSHFT     &kp KP_ASTERISK  &kp AMPS   &kp KP_MULTIPLY   &kp LPAR      &kp RPAR         &kp UNDER    &kp PLUS       &kp LBRC      &kp RBRC       &kp BSLH    &kp TILDE
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                              &none         &kp SPACE     &none            &none        &none          &none
+                                                              ___         &kp SPACE       ___              ___          ___            ___
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 
@@ -229,13 +254,13 @@
         num_layer {
             bindings = <
             //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                &tog NUM        &kp KP_PLUS      &kp N1        &kp N2       &kp N3      &kp KP_DIVIDE       &none          &none        &none          &none         &none         &none
+                &tog NUM      &kp KP_PLUS      &kp N1        &kp N2       &kp N3        &kp KP_DIVIDE       ___          ___            ___           ___           ___          ___
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &trans          &kp KP_MINUS     &kp N4        &kp N5       &kp N6      &kp DOT             &none        &kp RCTRL     &kp RSHFT       &kp RALT      &kp RGUI      &none
+                oooo          &kp KP_MINUS     &kp N4        &kp N5       &kp N6        &kp DOT             ___         &kp RCTRL       &kp RSHFT     &kp RALT      &kp RGUI     ___
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &trans          &kp KP_ASTERISK  &kp N7        &kp N8       &kp N9      &kp COMMA           &none        &none         &none           &none         &none         &none
+                oooo          &kp KP_ASTERISK  &kp N7        &kp N8       &kp N9        &kp COMMA           ___          ___            ___           ___           ___          ___
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                            &kp DELETE      &kp N0      &kp RETURN          &none        &tog NUM      &none
+                                                            &kp DELETE      &kp N0      &kp RETURN          ___         &tog NUM        ___
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 
@@ -245,13 +270,13 @@
         function_layer {
             bindings = <
             //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                &bt BT_SEL 0  &bt BT_SEL 1   &out OUT_TOG   &kp C_PREV    &kp C_NEXT    &kp C_VOL_UP        &kp F1         &kp F2        &kp F3        &kp F4        &none        &tog QWE
+                &bt BT_SEL 0  &bt BT_SEL 1   &out OUT_TOG   &kp C_PREV    &kp C_NEXT    &kp C_VOL_UP        &kp F1       &kp F2        &kp F3        &kp F4        ___          &tog QWE
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &bt BT_SEL 2  &bt BT_SEL 3      &none         &kp LSHFT   &kp C_PP      &kp C_VOL_DN        &kp F5         &kp F6        &kp F7        &kp F8        &none        &tog NUM
+                &bt BT_SEL 2  &bt BT_SEL 3      ___         &kp LSHFT     &kp C_PP      &kp C_VOL_DN        &kp F5       &kp F6        &kp F7        &kp F8        ___          &tog NUM
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &bt BT_SEL 4  &bt BT_CLR        &none         &none       &none         &kp C_MUTE          &kp F9         &kp F10       &kp F11       &kp F12       &none        &none
+                &bt BT_SEL 4  &bt BT_CLR        ___         ___           ___           &kp C_MUTE          &kp F9       &kp F10       &kp F11       &kp F12       ___      hH    ___
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                              &none       &none         &none               &none          &none         &none
+                                                            ___           ___           ___               ___            ___           ___
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 
@@ -261,13 +286,13 @@
         umlaut_layer {
             bindings = <
             //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                &trans          &trans          &trans      &trans          &trans         &trans           &trans        &trans       &de_ue         &trans       &trans        &trans
+                oooo            oooo            oooo        oooo            oooo         oooo               oooo         oooo          &de_ue         oooo          oooo        oooo
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &trans          &de_ae          &trans      &de_eszett      &trans         &trans           &trans        &trans       &euro_sign     &trans       &de_oe        &kp
+                oooo            &de_ae          oooo        &de_eszett      oooo         oooo               oooo         oooo          &euro_sign     oooo          &de_oe      oooo
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &trans          &trans          &trans      &trans          &trans         &trans           &trans        &trans       &trans         &trans       &trans        &trans
+                oooo            oooo            oooo        oooo            oooo         oooo               oooo         oooo          oooo           oooo          oooo        oooo
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                            &trans          &trans         &trans           &trans        &trans       &trans
+                                                            oooo            oooo         oooo               oooo         oooo          oooo
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 

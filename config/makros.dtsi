@@ -1,4 +1,41 @@
 
+#define COMBO_TERM_FAST 20
+#define COMBO_TERM_SLOW 35
+
+// make homerow combos tap-only (so HRMs can be chorded instantaneously)
+//#define HRC_TAB    &hml         LA(LCTRL) TAB
+//#define HRC_REPEAT &hml_repeat  LS(LCTRL) 0
+#define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
+#define HRC_RPAR   &hmr_rpar_gt LA(LCTRL) 0
+
+// tap: left-parenthesis | shft + tap: less-than
+ZMK_BEHAVIOR(lpar_lt, mod_morph,
+    bindings = <&kp LPAR>, <&kp LT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+// tap: right-parenthesis | shft + tap: greater-than
+ZMK_BEHAVIOR(rpar_gt, mod_morph,
+    bindings = <&kp RPAR>, <&kp GT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+
+/* Horizontal combos - right hand */
+ZMK_COMBO(crt,  &kp CARET,      RT0 RT1,     BASE QWE SYM, COMBO_TERM_FAST)
+ZMK_COMBO(amp,  &kp AMPS,       RT1 RT2,     BASE QWE SYM, COMBO_TERM_FAST)
+
+ZMK_COMBO(lpar,  HRC_LPAR,      RM1 RM2,     BASE QWE        , COMBO_TERM_FAST)
+ZMK_COMBO(rpar,  HRC_RPAR,      RM2 RM3,     BASE QWE        , COMBO_TERM_FAST)
+ZMK_COMBO(lt,    &kp LT,        RM1 RM2,              NAV SYM, COMBO_TERM_FAST)
+ZMK_COMBO(gt,    &kp GT,        RM2 RM3,              NAV SYM, COMBO_TERM_FAST)
+
+ZMK_COMBO(lbkt,  &kp LBKT,      RB1 RB2,     BASE QWE        , COMBO_TERM_FAST)
+ZMK_COMBO(rbkt,  &kp RBKT,      RB2 RB3,     BASE QWE        , COMBO_TERM_FAST)
+ZMK_COMBO(lbrc,  &kp LBRC,      RB1 RB2,              NAV SYM, COMBO_TERM_FAST)
+ZMK_COMBO(rbrc,  &kp RBRC,      RB2 RB3,              NAV SYM, COMBO_TERM_FAST)
+
+
 
 // Euro sign
 //ZMK_UNICODE_SINGLE(euro_sign, KP_N0, KP_N1, KP_N2, KP_N8)
@@ -10,5 +47,5 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 // Alt+Tab swapper, requires PR #1366
 ZMK_BEHAVIOR(swapper, tri_state,
 bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-ignored-key-positions = <LT2>;
+ignored-key-positions = <LT1>;
 )
