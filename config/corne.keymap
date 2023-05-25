@@ -1,0 +1,7 @@
+
+
+#include "../zmk-nodefree-config/keypos_def/keypos_36keys.h"
+#include "base.keymap"
+
+/* use 5-column layout for Chocofi */
+/ { chosen { zmk,matrix_transform = &five_column_transform; }; };
