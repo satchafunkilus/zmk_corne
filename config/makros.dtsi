@@ -22,14 +22,16 @@ ZMK_BEHAVIOR(rpar_gt, mod_morph,
 
 
 /* Horizontal combos - right hand */
-ZMK_COMBO(crt,  &kp CARET,      RT0 RT1,     BASE QWE SYM, COMBO_TERM_FAST)
+ZMK_COMBO(crt,  &wink,          RT0 RT1,     BASE QWE SYM, COMBO_TERM_FAST)
 ZMK_COMBO(amp,  &kp AMPS,       RT1 RT2,     BASE QWE SYM, COMBO_TERM_FAST)
 
+ZMK_COMBO(min,   &kp MINUS,     RM0 RM1,     BASE QWE        , COMBO_TERM_FAST)
 ZMK_COMBO(lpar,  HRC_LPAR,      RM1 RM2,     BASE QWE        , COMBO_TERM_FAST)
 ZMK_COMBO(rpar,  HRC_RPAR,      RM2 RM3,     BASE QWE        , COMBO_TERM_FAST)
 ZMK_COMBO(lt,    &kp LT,        RM1 RM2,              NAV SYM, COMBO_TERM_FAST)
 ZMK_COMBO(gt,    &kp GT,        RM2 RM3,              NAV SYM, COMBO_TERM_FAST)
 
+ZMK_COMBO(und,   &kp UNDER,     RB0 RB1,     BASE QWE        , COMBO_TERM_FAST)
 ZMK_COMBO(lbkt,  &kp LBKT,      RB1 RB2,     BASE QWE        , COMBO_TERM_FAST)
 ZMK_COMBO(rbkt,  &kp RBKT,      RB2 RB3,     BASE QWE        , COMBO_TERM_FAST)
 ZMK_COMBO(lbrc,  &kp LBRC,      RB1 RB2,              NAV SYM, COMBO_TERM_FAST)
