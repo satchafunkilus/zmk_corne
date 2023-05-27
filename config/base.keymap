@@ -222,7 +222,7 @@
                                                             &lt FUN TAB    &ltsl NAV UML &kp SPACE        &kp ENTER      &lt NUM BSPC  &lt SYM DEL
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
-
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
             label = "qwertz";
         };
 
@@ -270,7 +270,7 @@
                                                             &kp DELETE      &kp N0      &kp RETURN          ___         &tog NUM        ___
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
-
+            sensor-bindings = <&inc_dec_kp DOWN UP>;
             label = "num";
         };
 
@@ -286,7 +286,7 @@
                                                               ___         ___           ___                 ___          ___           ___
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
-
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             label = "function";
         };
 
