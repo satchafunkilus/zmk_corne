@@ -15,7 +15,7 @@
         compatible = "alps,ec11";
         label = "L_ENCODER";
         resolution = <8>;
-        status = "disabled";
+        status = "enabled";
 
         a-gpios = <&pro_micro 4 GPIO_PULL_UP>;
         b-gpios = <&pro_micro 5 GPIO_PULL_UP>;
