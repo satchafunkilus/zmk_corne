@@ -51,3 +51,8 @@ ZMK_BEHAVIOR(swapper, tri_state,
 bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
 ignored-key-positions = <LT1>;
 )
+
+ZMK_BEHAVIOR(swapper_r, tri_state,
+bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+ignored-key-positions = <LT0>;
+)
