@@ -171,7 +171,7 @@
 
         escape {
             bindings = <&mt LG(LA(K)) ESC>;
-            key-positions = <0 1>;
+            key-positions = <LT3 LT4>;
             layers = <0 1 4>;
         };
         cut {
