@@ -245,9 +245,9 @@
         symbol_layer {
             bindings = <
             //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                &kp ESC       &kp KP_PLUS      &kp EXCL       &kp AT        &kp HASH      ___              &kp CARET    &kp AMPS    &kp KP_MULTIPLY  &kp LPAR       &kp RPAR    &kp BSPC
+                &kp ESC       &kp KP_PLUS      &kp EXCL       &kp AT        &kp HASH      &kp GRAVE        &kp CARET    &kp AMPS    &kp KP_MULTIPLY  &kp LPAR       &kp RPAR    &kp BSPC
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &kp TAB       &kp KP_MINUS  &eur_dol EUR DLLR &kp PRCNT     &kp CARET     ___              &kp MINUS    &kp EQUAL      &kp LBKT      &kp RBKT       &kp PIPE    &kp GRAVE
+                &kp TAB       &kp KP_MINUS  &eur_dol EUR DLLR &kp PRCNT     &kp CARET     &kp TILDE        &kp MINUS    &kp EQUAL      &kp DQT        &kp SQT       &kp PIPE    &kp GRAVE
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                 &kp LSHFT     &kp KP_ASTERISK  &kp AMPS   &kp KP_MULTIPLY   &kp LPAR      &kp RPAR         &kp UNDER    &kp PLUS       &kp LBRC      &kp RBRC       &kp BSLH    &kp TILDE
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
