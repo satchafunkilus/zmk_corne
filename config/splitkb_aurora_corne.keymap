@@ -9,7 +9,7 @@
 
 #include "base.keymap"
 
-/* Change encoder resolution */
+/* Change encoder resolution from 4 to 2, so that every click is recorded as keypress */
 / { 
         left_encoder: left_encoder {
         compatible = "alps,ec11";
