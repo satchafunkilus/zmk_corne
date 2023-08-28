@@ -10,7 +10,7 @@
 #include "base.keymap"
 
 /* Change encoder resolution from 4 to 2, so that every click is recorded as keypress */
-/ { 
+/* / { 
         left_encoder: left_encoder {
         compatible = "alps,ec11";
         label = "L_ENCODER";
@@ -20,4 +20,4 @@
         a-gpios = <&pro_micro 4 GPIO_PULL_UP>;
         b-gpios = <&pro_micro 5 GPIO_PULL_UP>;
     };
- };
+ }; */
