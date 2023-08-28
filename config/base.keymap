@@ -20,12 +20,12 @@
 
 #define BASE    0
 #define QWE     1
-#define GAME    7
-#define NAV     2
-#define SYM     3
-#define NUM     4
-#define FUN     5
-#define UML     6
+#define GAME    2
+#define NAV     3
+#define SYM     4
+#define NUM     5
+#define FUN     6
+#define UML     7
 
 
 // Umlaut as Mod-Tap
@@ -159,15 +159,15 @@
         };
 
         tog_game {
-            bindings = <&tog 7>;
+            bindings = <&tog 2>;
             key-positions = <LT0 RT0>;
-            layers = <0 7>;
+            layers = <0 2>;
         }; 
 
         tog_num {
             bindings = <&tog 4>;
             key-positions = <RH1 RH2>;
-            layers = <0 4 1>;
+            layers = <0 5 1>;
         };
 
         caps_word_combo {
@@ -179,7 +179,7 @@
         escape {
             bindings = <&mt LG(LA(K)) ESC>;
             key-positions = <LT3 LT4>;
-            layers = <0 1 4>;
+            layers = <0 1 5>;
         };
         cut {
             bindings = <&kp LC(X)>;
@@ -214,7 +214,7 @@
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
-            label = "base"; 
+            label = "Base"; 
         };
 
         qwertz_layer {
@@ -245,7 +245,7 @@
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
-            label = "game"; 
+            label = "Game"; 
         }; 
 
         nav_layer {
@@ -261,7 +261,7 @@
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 
-            label = "navi";
+            label = "Navi";
         };
 
         symbol_layer {
@@ -277,7 +277,7 @@
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
-            label = "symbol";
+            label = "Symbol";
         };
 
         num_layer {
@@ -293,7 +293,7 @@
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
             sensor-bindings = <&inc_dec_kp UP DOWN>;
-            label = "num";
+            label = "Number";
         };
 
         function_layer {
@@ -309,7 +309,7 @@
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
             
-            label = "function";
+            label = "Function";
         };
 
         umlaut_layer {
@@ -325,7 +325,7 @@
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯ 
             >;
 
-            label = "umlaut";
+            label = "Umlaut";
         };
     };
 };
