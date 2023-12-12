@@ -50,6 +50,7 @@ ZMK_UNICODE_PAIR(cedi,    N0, N0,  E,  N7,    N0, N0,  C,  N7)
 ZMK_UNICODE_PAIR(a_gr,    N0, N0,  E,  N0,    N0, N0,  C,  N0)
 ZMK_UNICODE_PAIR(a_acu,   N0, N0,  E,  N1,    N0, N0,  C,  N1)
 ZMK_UNICODE_PAIR(a_circ,  N0, N0,  E,  N2,    N0, N0,  C,  N2)
+ZMK_UNICODE_PAIR(a_tild,  N0, N0,  E,  N3,    N0, N0,  C,  N3)
 
 ZMK_UNICODE_PAIR(e_gr,    N0, N0,  E,  N8,    N0, N0,  C,  N8)
 ZMK_UNICODE_PAIR(e_acu,   N0, N0,  E,  N9,    N0, N0,  C,  N9)
