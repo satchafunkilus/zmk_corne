@@ -45,6 +45,7 @@ ZMK_COMBO(rbrc,  &kp RBRC,      RB2 RB3,              NAV SYM, COMBO_TERM_FAST)
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
 ZMK_UNICODE_PAIR(es_n,    N0, N0,  F,  1,    N0, N0,  D,  1)
+ZMK_UNICODE_PAIR(cedi,    N0, N0,  E,  7,    N0, N0,  C,  7)
 
 ZMK_UNICODE_PAIR(a_gr,    N0, N0,  E,  0,    N0, N0,  C,  0)
 ZMK_UNICODE_PAIR(a_acu,   N0, N0,  E,  1,    N0, N0,  C,  1)
