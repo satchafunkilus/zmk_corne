@@ -44,28 +44,28 @@ ZMK_COMBO(rbrc,  &kp RBRC,      RB2 RB3,              NAV SYM, COMBO_TERM_FAST)
 // Additional unicode symbols
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
-ZMK_UNICODE_PAIR(es_n,    N0, N0,  F,  1,    N0, N0,  D,  1)
-ZMK_UNICODE_PAIR(cedi,    N0, N0,  E,  7,    N0, N0,  C,  7)
+ZMK_UNICODE_PAIR(es_n,    N0, N0,  F,  N1,    N0, N0,  D,  N1)
+ZMK_UNICODE_PAIR(cedi,    N0, N0,  E,  N7,    N0, N0,  C,  N7)
 
-ZMK_UNICODE_PAIR(a_gr,    N0, N0,  E,  0,    N0, N0,  C,  0)
-ZMK_UNICODE_PAIR(a_acu,   N0, N0,  E,  1,    N0, N0,  C,  1)
-ZMK_UNICODE_PAIR(a_circ,  N0, N0,  E,  2,    N0, N0,  C,  2)
+ZMK_UNICODE_PAIR(a_gr,    N0, N0,  E,  N0,    N0, N0,  C,  N0)
+ZMK_UNICODE_PAIR(a_acu,   N0, N0,  E,  N1,    N0, N0,  C,  N1)
+ZMK_UNICODE_PAIR(a_circ,  N0, N0,  E,  N2,    N0, N0,  C,  N2)
 
-ZMK_UNICODE_PAIR(e_gr,    N0, N0,  E,  8,    N0, N0,  C,  8)
-ZMK_UNICODE_PAIR(e_acu,   N0, N0,  E,  9,    N0, N0,  C,  9)
-ZMK_UNICODE_PAIR(e_circ,  N0, N0,  E,  A,    N0, N0,  C,  A)
+ZMK_UNICODE_PAIR(e_gr,    N0, N0,  E,  N8,    N0, N0,  C,  N8)
+ZMK_UNICODE_PAIR(e_acu,   N0, N0,  E,  N9,    N0, N0,  C,  N9)
+ZMK_UNICODE_PAIR(e_circ,  N0, N0,  E,  A,     N0, N0,  C,  A)
 
-ZMK_UNICODE_PAIR(i_gr,    N0, N0,  E,  C,    N0, N0,  C,  C)
-ZMK_UNICODE_PAIR(i_acu,   N0, N0,  E,  D,    N0, N0,  C,  D)
-ZMK_UNICODE_PAIR(i_circ,  N0, N0,  E,  E,    N0, N0,  C,  E)
+ZMK_UNICODE_PAIR(i_gr,    N0, N0,  E,  C,     N0, N0,  C,  C)
+ZMK_UNICODE_PAIR(i_acu,   N0, N0,  E,  D,     N0, N0,  C,  D)
+ZMK_UNICODE_PAIR(i_circ,  N0, N0,  E,  E,     N0, N0,  C,  E)
 
-ZMK_UNICODE_PAIR(o_gr,    N0, N0,  F,  2,    N0, N0,  D,  2)
-ZMK_UNICODE_PAIR(o_acu,   N0, N0,  F,  3,    N0, N0,  D,  3)
-ZMK_UNICODE_PAIR(o_circ,  N0, N0,  F,  4,    N0, N0,  D,  4)
+ZMK_UNICODE_PAIR(o_gr,    N0, N0,  F,  N2,    N0, N0,  D,  N2)
+ZMK_UNICODE_PAIR(o_acu,   N0, N0,  F,  N3,    N0, N0,  D,  N3)
+ZMK_UNICODE_PAIR(o_circ,  N0, N0,  F,  N4,    N0, N0,  D,  N4)
 
-ZMK_UNICODE_PAIR(u_gr,    N0, N0,  F,  9,    N0, N0,  D,  9)
-ZMK_UNICODE_PAIR(u_acu,   N0, N0,  F,  A,    N0, N0,  D,  A)
-ZMK_UNICODE_PAIR(u_circ,  N0, N0,  F,  B,    N0, N0,  D,  B)
+ZMK_UNICODE_PAIR(u_gr,    N0, N0,  F,  N9,    N0, N0,  D,  N9)
+ZMK_UNICODE_PAIR(u_acu,   N0, N0,  F,  A,     N0, N0,  D,  A)
+ZMK_UNICODE_PAIR(u_circ,  N0, N0,  F,  B,     N0, N0,  D,  B)
 
 
 
