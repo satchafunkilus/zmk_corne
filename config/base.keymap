@@ -180,7 +180,7 @@
         escape {
             bindings = <&mt LG(LA(K)) ESC>;
             key-positions = <LT3 LT4>;
-            layers = <0 1 5>;
+            layers = <0 1 2 5>;
         };
         cut {
             bindings = <&kp LC(X)>;
