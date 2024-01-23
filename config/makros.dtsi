@@ -20,7 +20,7 @@
             bindings =
                 <WIN_U_LEAD>,
                 <&macro_param_1to1>,
-                <&macro_tap MACRO_PLACEHOLDER>,
+                <&macro_tap &kp MACRO_PLACEHOLDER>,
                 <WIN_U_TRAIL>;
         };
         mak_ae_G: mak_ae_G {
