@@ -17,7 +17,7 @@
             label = "mak_ae";
             wait-ms = <0>;
             tap-ms = <0>;
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings =
                 <WIN_U_LEAD>,
                 <kp_auml_k>,
