@@ -160,7 +160,7 @@ behaviors {
         };
 
 
-        // Spanish/Portuguese symbols small/capital
+        // Spanish/Portuguese symbols small/capital 
         es_n: es_n {
                 compatible = "zmk,behavior-mod-morph";
                 label = "es_n";
@@ -285,6 +285,135 @@ behaviors {
             label = "u_circ";
             #binding-cells = <0>;
             bindings = <&mak_u_circ>, <&mak_u_circ_G>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+        // Spanish/Portuguese symbols small/capital (Linux)
+        es_n_l: es_n_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "es_n_l";
+            #binding-cells = <0>;
+            bindings = <&mak_es_n_l>, <&mak_es_n_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        cedi_l: cedi_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "cedi";
+            #binding-cells = <0>;
+            bindings = <&mak_cedi_l>, <&mak_cedi_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        a_gr_l: a_gr_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "a_gr_l";
+            #binding-cells = <0>;
+            bindings = <&mak_a_gr_l>, <&mak_a_gr_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        a_acu_l: a_acu_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "a_acu_l";
+            #binding-cells = <0>;
+            bindings = <&mak_a_acu_l>, <&mak_a_acu_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        a_circ_l: a_circ_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "a_circ_l";
+            #binding-cells = <0>;
+            bindings = <&mak_a_circ_l>, <&mak_a_circ_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        a_tild_l: a_tild_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "a_tild_l";
+            #binding-cells = <0>;
+            bindings = <&mak_a_tild_l>, <&mak_a_tild_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        e_gr_l: e_gr_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "e_gr_l";
+            #binding-cells = <0>;
+            bindings = <&mak_e_gr_l>, <&mak_e_gr_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        e_acu_l: e_acu_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "e_acu_l";
+            #binding-cells = <0>;
+            bindings = <&mak_e_acu_l>, <&mak_e_acu_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        e_circ_l: e_circ_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "e_circ_l";
+            #binding-cells = <0>;
+            bindings = <&mak_e_circ_l>, <&mak_e_circ_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        i_gr_l: i_gr_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "i_gr_l";
+            #binding-cells = <0>;
+            bindings = <&mak_i_gr_l>, <&mak_i_gr_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        i_acu_l: i_acu_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "i_acu_l";
+            #binding-cells = <0>;
+            bindings = <&mak_i_acu_l>, <&mak_i_acu_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        i_circ_l: i_circ_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "i_circ_l";
+            #binding-cells = <0>;
+            bindings = <&mak_i_circ_l>, <&mak_i_circ_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        o_gr_l: o_gr_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "o_gr_l";
+            #binding-cells = <0>;
+            bindings = <&mak_o_gr_l>, <&mak_o_gr_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        o_acu_l: o_acu_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "o_acu_l";
+            #binding-cells = <0>;
+            bindings = <&mak_o_acu_l>, <&mak_o_acu_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        o_circ_l: o_circ_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "o_circ_l";
+            #binding-cells = <0>;
+            bindings = <&mak_o_circ_l>, <&mak_o_circ_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        u_gr_l: u_gr_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "u_gr_l";
+            #binding-cells = <0>;
+            bindings = <&mak_u_gr_l>, <&mak_u_gr_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        u_acu_l: u_acu_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "u_acu_l";
+            #binding-cells = <0>;
+            bindings = <&mak_u_acu_l>, <&mak_u_acu_G_l>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        u_circ_l: u_circ_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "u_circ_l";
+            #binding-cells = <0>;
+            bindings = <&mak_u_circ_l>, <&mak_u_circ_G_l>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
