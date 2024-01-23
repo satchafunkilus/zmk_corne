@@ -38,7 +38,7 @@
 #define ___     &none
 #define oooo    &trans
 
-
+#include "makros_nodefree.dtsi"
 
 &lt {
     tapping-term-ms = <200>;
@@ -51,8 +51,9 @@
 };
 
 / {
-    #include "makros.dtsi"
 
+
+    #include "makros.dtsi"
 
     behaviors {
         hml: homerow_mods_left {
