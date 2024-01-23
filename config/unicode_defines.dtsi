@@ -12,3 +12,45 @@
 #define kp_uuml_G   &macro_tap &kp N0 &kp N0 &kp D &kp C
 #define kp_sz       &macro_tap &kp N0 &kp N0 &kp D &kp F
 #define kp_eur      &macro_tap &kp N2 &kp N0 &kp A &kp C
+
+#define kp_esn_k    &macro_tap &kp N0 &kp N0 &kp F &kp N1
+#define kp_esn_G    &macro_tap &kp N0 &kp N0 &kp D &kp N1
+#define kp_cedi_k   &macro_tap &kp N0 &kp N0 &kp E &kp N7
+#define kp_cedi_G   &macro_tap &kp N0 &kp N0 &kp C &kp N7
+
+#define kp_a_gr_k     &macro_tap &kp N0 &kp N0 &kp E &kp N0   
+#define kp_a_gr_G     &macro_tap &kp N0 &kp N0 &kp C &kp N0
+#define kp_a_acu_k    &macro_tap &kp N0 &kp N0 &kp E &kp N1    
+#define kp_a_acu_G    &macro_tap &kp N0 &kp N0 &kp C &kp N1
+#define kp_a_circ_k   &macro_tap &kp N0 &kp N0 &kp E &kp N2    
+#define kp_a_circ_G   &macro_tap &kp N0 &kp N0 &kp C &kp N2
+#define kp_a_tild_k   &macro_tap &kp N0 &kp N0 &kp E &kp N3    
+#define kp_a_tild_k   &macro_tap &kp N0 &kp N0 &kp C &kp N3
+
+#define kp_e_gr_k     &macro_tap &kp N0 &kp N0 &kp E &kp N8   
+#define kp_e_gr_G     &macro_tap &kp N0 &kp N0 &kp C &kp N8
+#define kp_e_acu_k    &macro_tap &kp N0 &kp N0 &kp E &kp N9    
+#define kp_e_acu_G    &macro_tap &kp N0 &kp N0 &kp C &kp N9
+#define kp_e_circ_k   &macro_tap &kp N0 &kp N0 &kp E &kp A    
+#define kp_e_circ_G   &macro_tap &kp N0 &kp N0 &kp C &kp A
+
+#define kp_i_gr_k     &macro_tap &kp N0 &kp N0 &kp E &kp C   
+#define kp_i_gr_G     &macro_tap &kp N0 &kp N0 &kp C &kp C
+#define kp_i_acu_k    &macro_tap &kp N0 &kp N0 &kp E &kp D    
+#define kp_i_acu_G    &macro_tap &kp N0 &kp N0 &kp C &kp D
+#define kp_i_circ_k   &macro_tap &kp N0 &kp N0 &kp E &kp E    
+#define kp_i_circ_G   &macro_tap &kp N0 &kp N0 &kp C &kp E
+
+#define kp_o_gr_k     &macro_tap &kp N0 &kp N0 &kp F &kp N2 
+#define kp_o_gr_G     &macro_tap &kp N0 &kp N0 &kp D &kp N2
+#define kp_o_acu_k    &macro_tap &kp N0 &kp N0 &kp F &kp N3    
+#define kp_o_acu_G    &macro_tap &kp N0 &kp N0 &kp D &kp N3
+#define kp_o_circ_k   &macro_tap &kp N0 &kp N0 &kp F &kp N4   
+#define kp_o_circ_G   &macro_tap &kp N0 &kp N0 &kp D &kp N4
+
+#define kp_u_gr_k     &macro_tap &kp N0 &kp N0 &kp F &kp N9 
+#define kp_u_gr_G     &macro_tap &kp N0 &kp N0 &kp D &kp N9
+#define kp_u_acu_k    &macro_tap &kp N0 &kp N0 &kp F &kp A    
+#define kp_u_acu_G    &macro_tap &kp N0 &kp N0 &kp D &kp A
+#define kp_u_circ_k   &macro_tap &kp N0 &kp N0 &kp F &kp B   
+#define kp_u_circ_G   &macro_tap &kp N0 &kp N0 &kp D &kp B

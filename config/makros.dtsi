@@ -192,4 +192,372 @@
                 <kp_eur>,
                 <LIN_U_TRAIL>;
         };
+
+
+        // Behaviors for Spanish/Portuguese symbols
+        mak_es_n: mak_es_n {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_esn_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_es_n_G: mak_es_n_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_esn_G>,
+                <LIN_U_TRAIL>;
+        };
+        mak_cedi: mak_cedi {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_cedi_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_cedi_G: mak_cedi_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_cedi_G>,
+                <LIN_U_TRAIL>;
+        };
+        // A with accents
+        mak_a_gr: mak_a_gr {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_a_gr_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_a_gr_G: mak_a_gr_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_a_gr_G>,
+                <LIN_U_TRAIL>;
+        };
+        mak_a_acu: mak_a_acu {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_a_acu_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_a_acu_G: mak_a_acu_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_a_acu_G>,
+                <LIN_U_TRAIL>;
+        };
+        mak_a_circ: mak_a_circ {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_a_circ_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_a_circ_G: mak_a_circ_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_a_circ_G>,
+                <LIN_U_TRAIL>;
+        };
+        mak_a_tild: mak_a_tild {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_a_tild_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_a_tild_G: mak_a_tild_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_a_tild_G>,
+                <LIN_U_TRAIL>;
+        };
+        // E with accents
+        mak_e_gr: mak_e_gr {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_e_gr_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_e_gr_G: mak_e_gr_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_e_gr_G>,
+                <LIN_U_TRAIL>;
+        };
+        mak_e_acu: mak_e_acu {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_e_acu_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_e_acu_G: mak_e_acu_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_e_acu_G>,
+                <LIN_U_TRAIL>;
+        };
+        mak_e_circ: mak_e_circ {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_e_circ_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_e_circ_G: mak_e_circ_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_e_circ_G>,
+                <LIN_U_TRAIL>;
+        };   
+        // I with accents
+        mak_i_gr: mak_i_gr {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_i_gr_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_i_gr_G: mak_i_gr_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_i_gr_G>,
+                <LIN_U_TRAIL>;
+        };
+        mak_i_acu: mak_i_acu {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_i_acu_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_i_acu_G: mak_i_acu_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_i_acu_G>,
+                <LIN_U_TRAIL>;
+        };
+        mak_i_circ: mak_i_circ {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_i_circ_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_i_circ_G: mak_i_circ_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_i_circ_G>,
+                <LIN_U_TRAIL>;
+        };
+        // O with accents
+        mak_o_gr: mak_o_gr {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_o_gr_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_o_gr_G: mak_o_gr_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_o_gr_G>,
+                <LIN_U_TRAIL>;
+        };
+        mak_o_acu: mak_o_acu {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_o_acu_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_o_acu_G: mak_o_acu_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_o_acu_G>,
+                <LIN_U_TRAIL>;
+        };
+        mak_o_circ: mak_o_circ {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_o_circ_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_o_circ_G: mak_o_circ_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_o_circ_G>,
+                <LIN_U_TRAIL>;
+        }; 
+        // U with accents
+        mak_u_gr: mak_u_gr {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_u_gr_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_u_gr_G: mak_u_gr_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_u_gr_G>,
+                <LIN_U_TRAIL>;
+        };
+        mak_u_acu: mak_u_acu {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_u_acu_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_u_acu_G: mak_u_acu_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_u_acu_G>,
+                <LIN_U_TRAIL>;
+        };
+        mak_u_circ: mak_u_circ {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_u_circ_k>,
+                <LIN_U_TRAIL>;
+        };
+        mak_u_circ_G: mak_u_circ_G {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <LIN_U_LEAD>,
+                <kp_u_circ_G>,
+                <LIN_U_TRAIL>;
+        };                                             
     };

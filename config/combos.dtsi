@@ -4,13 +4,13 @@
         tog_qwertz {
             bindings = <&tog 2>;
             key-positions = <LT4 RT4>;
-            layers = <BASE LINUX >;
+            layers = <BASE LINUX QWE QWEL>;
         };
 
         tog_lin {
             bindings = <&tog 1>;
             key-positions = <LT3 RT3>;
-            layers = <BASE QWE>;
+            layers = <BASE LINUX>;
         };
         tog_qwe_lin {
             bindings = <&tog 3>;
