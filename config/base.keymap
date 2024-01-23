@@ -30,7 +30,7 @@
 #define UMLW    9
 #define UMLQW   10
 #define UMLL    11
-#define UMLQWL  12
+#define UMLQL  12
 #define ACC     13
 
 // Umlaut as Mod-Tap
