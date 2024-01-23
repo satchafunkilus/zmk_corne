@@ -598,7 +598,7 @@
         };          
 
         // Behaviors for Spanish/Portuguese symbols (Linux)
-        mak_es_n: mak_es_n_l {
+        mak_es_n_l: mak_es_n_l {
             compatible = "zmk,behavior-macro";
             label = "mak_es_n";
             wait-ms = <0>;
