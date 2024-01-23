@@ -6,7 +6,7 @@
 //#define HOST_OS 2
 
 #include <behaviors.dtsi>
-#include "./helper.h"
+//#include "./helper.h"
 //#include "./german.dtsi"
 
 #include <dt-bindings/zmk/keys.h>
@@ -36,7 +36,7 @@
 #define ___     &none
 #define oooo    &trans
 
-#include "makros_nodefree.dtsi"
+//#include "makros_nodefree.dtsi"
 
 // Define timings for core behaviors
 &lt {
