@@ -107,7 +107,7 @@ behaviors {
                 mods = <(MOD_LSFT|MOD_RSFT)>;
         };   
         // tap: right-parenthesis | shft + tap: greater-than     
-        rpar_lt: rpar_lt {
+        rpar_lt: rpar_gt {
                 compatible = "zmk,behavior-mod-morph";
                 label = "rpar_lt";
                 #binding-cells = <0>;
