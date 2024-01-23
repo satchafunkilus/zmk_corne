@@ -77,4 +77,48 @@ behaviors {
                 <&kp>,
                 <&sk>;
         };
+
+        de_ae: de_ae {
+                compatible = "zmk,behavior-mod-morph";
+                label = de_ae;
+                #binding-cells = <0>;
+                bindings = &mak_ae, &mak_ae_G;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+/*         de_oe: de_oe {
+                compatible = "zmk,behavior-mod-morph";
+                label = de_oe;
+                #binding-cells = <0>;
+                bindings = &mak_oe, &mak_oe_G;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        de_ue: de_ue {
+                compatible = "zmk,behavior-mod-morph";
+                label = de_ue;
+                #binding-cells = <0>;
+                bindings = &mak_ue, &mak_ue_G;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+         de_ae_l: de_ae_l {
+                compatible = "zmk,behavior-mod-morph";
+                label = de_ae_l;
+                #binding-cells = <0>;
+                bindings = &mak_ae_l, &mak_ae_G_l;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        de_oe_l: de_oe_l {
+                compatible = "zmk,behavior-mod-morph";
+                label = de_oe_l;
+                #binding-cells = <0>;
+                bindings = &mak_oe_l, &mak_oe_G_l;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        de_ue_l: de_ue_l {
+                compatible = "zmk,behavior-mod-morph";
+                label = de_ue;
+                #binding-cells = <0>;
+                bindings = &mak_ue_l, &mak_ue_G_l;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+        }; */
+
     };

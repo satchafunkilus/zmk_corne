@@ -1,14 +1,34 @@
     macros {
+        compatible = "zmk,behavior-macro";
+
         ppt_fp: ppt_fp {
             label = "PPT format painter";
-            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LALT &kp H &kp F &kp P>;
         };
         wink: wink {
             label = "^^";
-            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp CARET &kp CARET>;
+        };
+        mak_ae: mak_ae {
+                label = mak_ae;
+                wait-ms = <0>;
+                tap-ms = <0>;
+                #binding-cells = <0>;
+                bindings
+                    = <WIN_U_LEAD>
+                    , <kp_auml_k>
+                    , <WIN_U_TRAIL>;
+        };
+        mak_ae_G: mak_ae_G {
+                label = mak_ae;
+                wait-ms = <0>;
+                tap-ms = <0>;
+                #binding-cells = <0>;
+                bindings
+                    = <WIN_U_LEAD>
+                    , <kp_auml_G>
+                    , <WIN_U_TRAIL>;
         };
     };

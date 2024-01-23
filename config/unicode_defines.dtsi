@@ -1,0 +1,13 @@
+// ZMK_UNICODE
+#define LIN_U_LEAD &macro_tap &kp LS(LC(U))   // Linux
+#define WIN_U_LEAD &macro_tap &kp RALT &kp U  // Windows + WinCompose (default)
+#define LIN_U_TRAIL &macro_tap &kp SPACE     // Linux
+#define WIN_U_TRAIL &macro_tap &kp RET       // Windows + WinCompose (default)
+
+#define kp_auml_k   &macro_tap &kp N0, &kp N0, &kp E, &kp N4
+#define kp_auml_G   &macro_tap &kp N0, &kp N0, &kp C, &kp N4
+#define kp_ouml_k   &macro_tap &kp N0, &kp N0, &kp F, &kp N6
+#define kp_ouml_G   &macro_tap &kp N0, &kp N0, &kp D, &kp N6
+#define kp_uuml_k   &macro_tap &kp N0, &kp N0, &kp F, &kp C
+#define kp_uuml_G   &macro_tap &kp N0, &kp N0, &kp D, &kp C
+#define kp_sz       &macro_tap &kp N0, &kp N0, &kp D, &kp F

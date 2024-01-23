@@ -30,6 +30,8 @@
 #define ACC     13
 #define ACCL    14
 
+#include "unicode_defines.dtsi"
+
 // Symbols for better visibility in keymap
 #define ___     &none
 #define oooo    &trans
