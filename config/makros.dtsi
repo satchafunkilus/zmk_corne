@@ -11,7 +11,7 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp CARET>;
         };
-        // Windows Macros
+        // Windows Macros for unicode entering of Umlauts, etc.
         mak_ae: mak_ae {
             compatible = "zmk,behavior-macro";
             label = "mak_ae";
@@ -39,7 +39,7 @@
             label = "mak_oe";
             wait-ms = <0>;
             tap-ms = <0>;
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings =
                 <WIN_U_LEAD>,
                 <kp_ouml_k>,
@@ -61,7 +61,7 @@
             label = "mak_ue";
             wait-ms = <0>;
             tap-ms = <0>;
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings =
                 <WIN_U_LEAD>,
                 <kp_uuml_k>,
@@ -89,13 +89,13 @@
                 <kp_sz>,
                 <WIN_U_TRAIL>;
         };
-        // Linux Macros
+        // Linux Macros for unicode entering of Umlauts, etc.
         mak_ae_l: mak_ae_l {
             compatible = "zmk,behavior-macro";
             label = "mak_ae_l";
             wait-ms = <0>;
             tap-ms = <0>;
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings =
                 <LIN_U_LEAD>,
                 <kp_auml_k>,
@@ -117,7 +117,7 @@
             label = "mak_oe_l";
             wait-ms = <0>;
             tap-ms = <0>;
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings =
                 <LIN_U_LEAD>,
                 <kp_ouml_k>,
@@ -139,7 +139,7 @@
             label = "mak_ue_l";
             wait-ms = <0>;
             tap-ms = <0>;
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings =
                 <LIN_U_LEAD>,
                 <kp_uuml_k>,
