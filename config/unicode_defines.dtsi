@@ -11,3 +11,4 @@
 #define kp_uuml_k   &macro_tap &kp N0 &kp N0 &kp F &kp C
 #define kp_uuml_G   &macro_tap &kp N0 &kp N0 &kp D &kp C
 #define kp_sz       &macro_tap &kp N0 &kp N0 &kp D &kp F
+#define kp_eur      &macro_tap &kp N2 &kp N0 &kp A &kp C

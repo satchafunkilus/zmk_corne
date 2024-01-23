@@ -78,7 +78,26 @@ behaviors {
                 <&sk>;
         };
 
-        de_ae: de_ae {
+        // Alt+Tab swapper
+        swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "tri_state";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            ignored-key-positions = <LT1>;
+        }
+        swapper_r: swapper_r {
+            compatible = "zmk,behavior-tri-state";
+            label = "tri_state";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            ignored-key-positions = <LT0>;
+        }
+
+
+
+        // Umlaut and special symbol Mod-Morph behaviors
+                de_ae: de_ae {
                 compatible = "zmk,behavior-mod-morph";
                 label = "de_ae";
                 #binding-cells = <0>;
@@ -119,6 +138,6 @@ behaviors {
                 #binding-cells = <0>;
                 bindings = <&mak_ue_l>, <&mak_ue_G_l>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
-        }; 
+        };
 
     };

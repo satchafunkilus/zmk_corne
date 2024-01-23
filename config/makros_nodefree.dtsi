@@ -42,9 +42,9 @@ ZMK_COMBO(rbrc,  &kp RBRC,      RB2 RB3,              NAV SYM, COMBO_TERM_FAST)
 
 
 // Additional unicode symbols
-ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
-ZMK_UNICODE_SINGLE_WIN(euro_w, N2, N0, A, C)
-ZMK_UNICODE_SINGLE_LIN(euro_l, N2, N0, A, C)
+//ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
+//ZMK_UNICODE_SINGLE_WIN(euro_w, N2, N0, A, C)
+//ZMK_UNICODE_SINGLE_LIN(euro_l, N2, N0, A, C)
 
 ZMK_UNICODE_PAIR(es_n,    N0, N0,  F,  N1,    N0, N0,  D,  N1)
 ZMK_UNICODE_PAIR_WIN(es_n_w,    N0, N0,  F,  N1,    N0, N0,  D,  N1)
@@ -96,7 +96,7 @@ ZMK_UNICODE_PAIR_LIN(u_circ_l,  N0, N0,  F,  B,     N0, N0,  D,  B)
 //ZMK_CONDITIONAL_LAYER(1 2, 4)
 
 // Alt+Tab swapper, requires PR #1366
-ZMK_BEHAVIOR(swapper, tri_state,
+/* ZMK_BEHAVIOR(swapper, tri_state,
 bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
 ignored-key-positions = <LT1>;
 )
@@ -104,4 +104,4 @@ ignored-key-positions = <LT1>;
 ZMK_BEHAVIOR(swapper_r, tri_state,
 bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
 ignored-key-positions = <LT0>;
-)
+) */
