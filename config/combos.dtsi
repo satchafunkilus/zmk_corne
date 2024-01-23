@@ -1,60 +1,154 @@
  combos {
         compatible = "zmk,combos";
-
+        // Layer Toggle Combos
         tog_qwertz {
             bindings = <&tog 2>;
             key-positions = <LT4 RT4>;
-            layers = <0 2>;
+            layers = <BASE LINUX >;
         };
 
         tog_lin {
             bindings = <&tog 1>;
             key-positions = <LT3 RT3>;
-            layers = <0 1>;
+            layers = <BASE QWE>;
         };
         tog_qwe_lin {
             bindings = <&tog 3>;
             key-positions = <LT3 RT3>;
-            layers = <2 3>;
+            layers = <QWE QWEL>;
         };
 
         tog_game {
             bindings = <&tog 4>;
             key-positions = <LT0 RT0>;
-            layers = <0 1 2 3>;
+            layers = <BASE QWE LINUX QWEL>;
         };
 
         tog_num {
             bindings = <&tog 7>;
             key-positions = <RH1 RH2>;
-            layers = <0 1 2 3>;
+            layers = <BASE QWE LINUX QWEL>;
         };
 
+        // Modifier Combos
         caps_word_combo {
             bindings = <&caps_word>;
             key-positions = <LH0 RH0>;
-            layers = <0 1 2 3>;
+            layers = <BASE QWE LINUX QWEL>;
         };
 
+        // Combos for keys
         escape {
             bindings = <&mt LG(LA(K)) ESC>;
             key-positions = <LT3 LT4>;
-            layers = <0 1 2 3 4 7>;
+            timeout-ms = <20>;
+            layers = <BASE QWE LINUX QWEL GAME NUM>;
         };
+        crt {
+            bindings = <&wink>;
+            key-positions = <RT0 RT1>;
+            timeout-ms = <20>;
+            layers = <BASE LINUX QWE QWEL>;
+        };
+        amp {
+            bindings = <&kp AMPS>;
+            key-positions = <RT1 RT2>;
+            timeout-ms = <20>;
+            layers = <BASE LINUX QWE QWEL>;
+        };
+        anf {
+            bindings = <&kp DQT>;
+            key-positions = <RT2 RT3>;
+            timeout-ms = <20>;
+            layers = <BASE LINUX QWE QWEL>;
+        };
+        apo {
+            bindings = <&kp SQT>;
+            key-positions = <RT3 RT4>;
+            timeout-ms = <20>;
+            layers = <BASE LINUX QWE QWEL>;
+        };
+        min {
+            bindings = <&kp MINUS>;
+            key-positions = <RM0 RM1>;
+            timeout-ms = <20>;
+            layers = <BASE LINUX QWE QWEL>;
+        };
+        lpar {
+            bindings = <&hmr_lpar_lt RS(LCTRL) 0>;
+            key-positions = <RM1 RM2>;
+            timeout-ms = <20>;
+            layers = <BASE LINUX QWE QWEL>;
+        };
+        rpar {
+            bindings = <&hmr_rpar_gt LA(LCTRL) 0>;
+            key-positions = <RM2 RM3>;
+            timeout-ms = <20>;
+            layers = <BASE LINUX QWE QWEL>;
+        };
+        lt {
+            bindings = <&kp LT>;
+            key-positions = <RM1 RM2>;
+            timeout-ms = <20>;
+            layers = <NAV SYM>;
+        };
+        gt {
+            bindings = <&kp GT>;
+            key-positions = <RM2 RM3>;
+            timeout-ms = <20>;
+            layers = <NAV SYM>;
+        };
+        und {
+            bindings = <&kp UNDER>;
+            key-positions = <RB0 RB1>;
+            timeout-ms = <20>;
+            layers = <BASE LINUX QWE QWEL>;
+        };
+        lbkt {
+            bindings = <&kp LBKT>;
+            key-positions = <RB1 RB2>;
+            timeout-ms = <20>;
+            layers = <BASE LINUX QWE QWEL>;
+        };
+        rbkt {
+            bindings = <&kp RBKT>;
+            key-positions = <RB2 RB3>;
+            timeout-ms = <20>;
+            layers = <BASE LINUX QWE QWEL>;
+        };
+        lbrc {
+            bindings = <&kp LBRC>;
+            key-positions = <RB1 RB2>;
+            timeout-ms = <20>;
+            layers = <NAV SYM>;
+        };
+        rbrc {
+            bindings = <&kp RBRC>;
+            key-positions = <RB2 RB3>;
+            timeout-ms = <20>;
+            layers = <NAV SYM>;
+        };
+
+
+
+
+
+
+        // Combos for functions
         cut {
             bindings = <&kp LC(X)>;
             key-positions = <LB3 LB2>;
-            layers = <0 1 2 3>;
+            layers = <BASE LINUX QWE QWEL>;
         };
         copy {
             bindings = <&kp LC(C)>;
             key-positions = <LB2 LB1>;
-            layers = <0 1 2 3>;
+            layers = <BASE LINUX QWE QWEL>;
         };
         paste {
             bindings = <&kp LC(V)>;
             key-positions = <LB1 LB0>;
-            layers = <0 1 2 3>;
+            layers = <BASE LINUX QWE QWEL>;
         };
 
 

@@ -97,7 +97,7 @@ behaviors {
 
 
         // Umlaut and special symbol Mod-Morph behaviors
-                de_ae: de_ae {
+        de_ae: de_ae {
                 compatible = "zmk,behavior-mod-morph";
                 label = "de_ae";
                 #binding-cells = <0>;
