@@ -33,19 +33,12 @@
 #define UMLQL   12
 #define ACC     13
 #define ACCL    14
-// Umlaut as Mod-Tap
 
-#define AUML &de_ae
-#define OUML &de_oe
-#define UUML &de_ue
-#define DESZ &de_sz
-#define EUR  &euro_sign
-#define FOPT &ppt_fp
 
 #define ___     &none
 #define oooo    &trans
 
-#include "makros.dtsi"
+
 
 &lt {
     tapping-term-ms = <200>;
@@ -58,20 +51,8 @@
 };
 
 / {
-    macros {
-        ppt_fp: ppt_fp {
-            label = "PPT format painter";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LALT &kp H &kp F &kp P>;
-        };
-        wink: wink {
-            label = "^^";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp CARET>;
-        };
-    };
+    #include "makros.dtsi"
+
 
     behaviors {
         hml: homerow_mods_left {

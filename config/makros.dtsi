@@ -105,3 +105,18 @@ ZMK_BEHAVIOR(swapper_r, tri_state,
 bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
 ignored-key-positions = <LT0>;
 )
+
+    macros {
+        ppt_fp: ppt_fp {
+            label = "PPT format painter";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &kp H &kp F &kp P>;
+        };
+        wink: wink {
+            label = "^^";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp CARET>;
+        };
+    };
