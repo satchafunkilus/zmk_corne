@@ -7,7 +7,7 @@
 
 #include <behaviors.dtsi>
 #include "./helper.h"
-#include "./german.dtsi"
+//#include "./german.dtsi"
 
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
