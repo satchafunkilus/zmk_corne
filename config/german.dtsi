@@ -5,10 +5,10 @@
 //ZMK_UNICODE_SINGLE( de_sz,      N0, N0,  D,  F)
 
 /* German umlauts Linux */
-ZMK_UNICODE_PAIR_LIN(   de_ae_l,      N0, N0,  E, N4,    N0, N0,  C, N4)
-ZMK_UNICODE_PAIR_LIN(   de_oe_l,      N0, N0,  F, N6,    N0, N0,  D, N6)
-ZMK_UNICODE_PAIR_LIN(   de_ue_l,      N0, N0,  F,  C,    N0, N0,  D,  C)
-ZMK_UNICODE_SINGLE_LIN( de_sz_l,      N0, N0,  D,  F)
+//ZMK_UNICODE_PAIR_LIN(   de_ae_l,      N0, N0,  E, N4,    N0, N0,  C, N4)
+//ZMK_UNICODE_PAIR_LIN(   de_oe_l,      N0, N0,  F, N6,    N0, N0,  D, N6)
+//ZMK_UNICODE_PAIR_LIN(   de_ue_l,      N0, N0,  F,  C,    N0, N0,  D,  C)
+//ZMK_UNICODE_SINGLE_LIN( de_sz_l,      N0, N0,  D,  F)
 
 /* German umlauts Windows */
 //ZMK_UNICODE_PAIR_WIN(   de_ae,      N0, N0,  E, N4,    N0, N0,  C, N4)
