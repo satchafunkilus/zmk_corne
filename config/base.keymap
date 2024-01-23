@@ -166,12 +166,12 @@
         tog_lin {
             bindings = <&tog 1>;
             key-positions = <LT3 RT3>;
-            layers = <0>;
+            layers = <0 1>;
         };
         tog_qwe_lin {
             bindings = <&tog 3>;
             key-positions = <LT3 RT3>;
-            layers = <2>;
+            layers = <2 3>;
         };
 
         tog_game {
