@@ -12,7 +12,7 @@
             bindings = <&kp CARET &kp CARET>;
         };
         mak_ae: mak_ae {
-                label = mak_ae;
+                label = "mak_ae";
                 wait-ms = <0>;
                 tap-ms = <0>;
                 #binding-cells = <0>;
@@ -22,7 +22,7 @@
                     , <WIN_U_TRAIL>;
         };
         mak_ae_G: mak_ae_G {
-                label = mak_ae;
+                label = "mak_ae_G";
                 wait-ms = <0>;
                 tap-ms = <0>;
                 #binding-cells = <0>;
