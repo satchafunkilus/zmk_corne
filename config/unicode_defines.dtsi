@@ -4,7 +4,7 @@
 #define LIN_U_TRAIL &macro_tap &kp SPACE     // Linux
 #define WIN_U_TRAIL &macro_tap &kp RET       // Windows + WinCompose (default)
 
-#define kp_auml_k   &macro_tap &kp N0 &kp N0 &kp E &kp N4
+#define kp_auml_k   &kp N0 &kp N0 &kp E &kp N4
 #define kp_auml_G   &macro_tap &kp N0 &kp N0 &kp C &kp N4
 #define kp_ouml_k   &macro_tap &kp N0 &kp N0 &kp F &kp N6
 #define kp_ouml_G   &macro_tap &kp N0 &kp N0 &kp D &kp N6

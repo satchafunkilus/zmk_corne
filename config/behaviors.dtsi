@@ -82,7 +82,7 @@ behaviors {
                 compatible = "zmk,behavior-mod-morph";
                 label = "de_ae";
                 #binding-cells = <0>;
-                bindings = <&mak_ae>, <&mak_ae_G>;
+                bindings = <&mak_ae kp_auml_k>, <&mak_ae_G>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 /*         de_oe: de_oe {
