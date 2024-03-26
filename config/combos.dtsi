@@ -27,7 +27,7 @@
         tog_num {
             bindings = <&tog 7>;
             key-positions = <RH1 RH2>;
-            layers = <0 1 2 3>;
+            layers = <0 1 2 3 7>;
         };
 
         caps_word_combo {
