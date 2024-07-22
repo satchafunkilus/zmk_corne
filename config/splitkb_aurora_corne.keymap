@@ -9,6 +9,14 @@
 
 #include "base.keymap"
 
+/ {
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <18>;
+    };
+};
+
 /* Change encoder resolution from 4 to 2, so that every click is recorded as keypress */
 /* / { 
         left_encoder: left_encoder {
