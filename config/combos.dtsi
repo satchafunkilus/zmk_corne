@@ -21,7 +21,7 @@
         tog_game {
             bindings = <&tog 4>;
             key-positions = <LT0 RT0>;
-            layers = <0 1 2 3>;
+            layers = <0 1 2 3 4>;
         };
 
         tog_num {
