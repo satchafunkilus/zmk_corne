@@ -1,6 +1,6 @@
 file_format: "1"
-id: choco_cirque
-name: Chocofi
+id: corne
+name: corne
 type: shield
 url: https://github.com/foostan/crkbd/
 requires: [pro_micro]
