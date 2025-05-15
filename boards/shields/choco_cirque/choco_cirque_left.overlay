@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "choco_circque.dtsi"
+#include "choco_cirque.dtsi"
 
 &kscan0 {
     col-gpios
