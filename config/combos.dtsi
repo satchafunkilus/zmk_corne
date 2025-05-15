@@ -41,6 +41,21 @@
             key-positions = <LT3 LT4>;
             layers = <0 1 2 3 4 7>;
         };
+        win {
+            bindings = <&kp RGUI;
+            key-positions = <LH4 LH3 LH2>;
+            layers = <0 1 2 3>;
+        };
+        tab {
+            bindings = <&kp TAB;
+            key-positions = <LH3 LH2 LH1>;
+            layers = <0 1 2 3>;
+        };
+        enter {
+            bindings = <&kp ENTER;
+            key-positions = <RH1 RH2 RH3>;
+            layers = <0 1 2 3>;
+        };       
         cut {
             bindings = <&kp LC(X)>;
             key-positions = <LB3 LB2>;
