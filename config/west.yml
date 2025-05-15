@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/urob
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
       remote: urob
@@ -13,6 +15,9 @@ manifest:
       import: app/west.yml
     - name: zmk-tri-state
       remote: dhruvinsh
+      revision: main
+    - name: cirque-input-module
+      remote: petejohanson
       revision: main
   self:
     path: config
