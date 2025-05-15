@@ -47,12 +47,12 @@
             layers = <0 1 2 3>;
         };
         tab {
-            bindings = <&kp TAB;
+            bindings = <&kp TAB>;
             key-positions = <LM3 LM2 LM1>;
             layers = <0 1 2 3>;
         };
         enter {
-            bindings = <&kp ENTER;
+            bindings = <&kp ENTER>;
             key-positions = <RM1 RM2 RM3>;
             layers = <0 1 2 3>;
         };       
