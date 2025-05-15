@@ -43,17 +43,17 @@
         };
         win {
             bindings = <&kp RGUI;
-            key-positions = <LH4 LH3 LH2>;
+            key-positions = <LM4 LM3 LM2>;
             layers = <0 1 2 3>;
         };
         tab {
             bindings = <&kp TAB;
-            key-positions = <LH3 LH2 LH1>;
+            key-positions = <LM3 LM2 LM1>;
             layers = <0 1 2 3>;
         };
         enter {
             bindings = <&kp ENTER;
-            key-positions = <RH1 RH2 RH3>;
+            key-positions = <RM1 RM2 RM3>;
             layers = <0 1 2 3>;
         };       
         cut {

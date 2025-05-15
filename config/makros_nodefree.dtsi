@@ -45,6 +45,8 @@ ZMK_COMBO(rbrc,  &kp RBRC,      RB2 RB3,                         NAV SYM, COMBO_
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 ZMK_UNICODE_SINGLE_WIN(euro_w, N2, N0, A, C)
 ZMK_UNICODE_SINGLE_LIN(euro_l, N2, N0, A, C)
+ZMK_UNICODE_SINGLE_WIN( degr,      N0, N0,  B, N0)       
+ZMK_UNICODE_SINGLE_LIN( degr,      N0, N0,  B, N0)    
 
 ZMK_UNICODE_PAIR(es_n,    N0, N0,  F,  N1,    N0, N0,  D,  N1)
 ZMK_UNICODE_PAIR_WIN(es_n_w,    N0, N0,  F,  N1,    N0, N0,  D,  N1)
