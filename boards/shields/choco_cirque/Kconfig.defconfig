@@ -13,10 +13,6 @@ if SHIELD_CHOCO_CIRQUE_RIGHT
 config ZMK_USB
     default n
 
-# Assuming pointing device uses SPI
-config SPI
-    default y
-
 endif
 
 if SHIELD_CHOCO_CIRQUE_LEFT || SHIELD_CHOCO_CIRQUE_RIGHT
@@ -27,10 +23,10 @@ config ZMK_SPLIT
 config ZMK_POINTING
     default y
 
-if ZMK_DISPLAY
-
 config I2C
     default y
+
+if ZMK_DISPLAY
 
 config SSD1306
     default y
