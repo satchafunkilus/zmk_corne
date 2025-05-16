@@ -21,6 +21,9 @@ if SHIELD_CHOCO_CIRQUE_LEFT || SHIELD_CHOCO_CIRQUE_RIGHT
 config ZMK_SPLIT
     default y
 
+config ZMK_POINTING
+    default y
+
 if ZMK_DISPLAY
 
 config I2C

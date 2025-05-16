@@ -10,9 +10,12 @@ manifest:
       url-base: https://github.com/petejohanson
   projects:
     - name: zmk
-      remote: urob
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-helpers
+      remote: urob
+      revision: main
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
