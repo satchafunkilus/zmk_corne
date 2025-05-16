@@ -10,6 +10,9 @@ endif
 
 if SHIELD_CHOCO_CIRQUE_RIGHT
 
+config ZMK_USB
+    default n
+
 # Assuming pointing device uses SPI
 config SPI
     default y
