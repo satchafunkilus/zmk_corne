@@ -33,7 +33,7 @@
         reg = <0x2a>;
         status = "okay";
         dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>;
-        sensitivity = "2x";  // Smaller number increases sensitivity
+        sensitivity = "4x";  // Smaller number increases sensitivity
         sleep;
         //no-taps;
         y-invert;
