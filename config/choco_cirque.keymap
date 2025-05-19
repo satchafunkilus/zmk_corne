@@ -14,19 +14,18 @@
 
 
 
-/ {
-    // Functions for Cirque Trackpad
-    &glidepoint_listener {
-        // Activating trackpad switches to MOUSE layer for 2000ms
-        input-processors = <&zip_temp_layer	MOUSE 2000>;
+// Functions for Cirque Trackpad
+&glidepoint_listener {
+    // Activating trackpad switches to MOUSE layer for 2000ms
+    input-processors = <&zip_temp_layer	MOUSE 2000>;
 
-        // When in the function layer, use trackpad for scrolling instead of pointer movement
-        scroller {
-            layers = <FUN>;
-            input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 5>;
-        };
+    // When in the function layer, use trackpad for scrolling instead of pointer movement
+    scroller {
+        layers = <FUN>;
+        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 5>;
     };
 };
+
 
 / {
     // Add Mouse layer to base-keymap
