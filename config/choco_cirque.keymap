@@ -22,7 +22,7 @@
     // When in the function layer, use trackpad for scrolling instead of pointer movement
     scroller {
         layers = <FUN>;
-        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 5>;
+        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 8>;
     };
 };
 
@@ -39,9 +39,9 @@
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                 oooo            &kp LGUI        &kp LALT    &kp LSHFT      &kp LCTRL     &msc SCRL_DOWN     oooo        oooo          oooo          oooo          oooo           oooo
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &kp LC(Z)       &kp LC(X)       &kp LC(C)   &kp LC(V)      oooo          oooo               oooo        oooo          oooo          oooo          oooo           oooo
+                &kp LC(Z)       &kp LC(X)       &kp LC(C)   &kp LC(V)      oooo          &mkp MCLK          oooo        oooo          oooo          oooo          oooo           oooo
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                            &mkp MCLK      &mkp RCLK     &mkp LCLK          oooo        oooo          oooo
+                                                            oooo           &mkp RCLK     &mkp LCLK          oooo        oooo          oooo
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
             label = "Mouse";
