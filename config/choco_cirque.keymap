@@ -1,5 +1,5 @@
 
-#include "keypos_42keys.h"
+#include "./nodefree/keypos_42keys.h"
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/mouse.h>
