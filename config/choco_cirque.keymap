@@ -22,7 +22,7 @@
     // When in the function layer, use trackpad for scrolling instead of pointer movement
     scroller {
         layers = <FUN>;
-        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 8>;
+        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 12>;
     };
 };
 
