@@ -1,14 +1,14 @@
     macros {
-        ppt_fp: ppt_fp {
-            label = "PPT format painter";
+        // Powerpoint Format Painter
+        ppt_fp: ppt_fp {    
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LALT &kp H &kp F &kp P>;
         };
-        wink: wink {
-            label = "^^";
+        // ^^
+        wink: wink {   
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CARET &kp CARET>;
+            bindings = <&kp CARET &kp CARET>; 
         };
     };

@@ -1,7 +1,6 @@
 behaviors {
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRML";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <125>;
@@ -12,7 +11,6 @@ behaviors {
         };
         hmr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRMR";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <125>;
@@ -23,7 +21,6 @@ behaviors {
         };
         hmr_lpar_lt: hmr_lpar_lt {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR_LPAR";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <125>;
@@ -34,7 +31,6 @@ behaviors {
         };
         hmr_rpar_gt: hmr_rpar_gt {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR_RPAR";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <125>;
@@ -45,7 +41,6 @@ behaviors {
         };
         eur_dol: euro_dollar {
             compatible = "zmk,behavior-hold-tap";
-            label = "Euro / Dollar";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <125>;
@@ -57,7 +52,6 @@ behaviors {
         };
         ltsl: layerTapSL {
             compatible = "zmk,behavior-hold-tap";
-            label = "Layer toggle / sticky layer";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
@@ -68,7 +62,6 @@ behaviors {
         };
         htsk: htsk {
             compatible = "zmk,behavior-hold-tap";
-            label = "Hold-Tap with Sticky Key";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
