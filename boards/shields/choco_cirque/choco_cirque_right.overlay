@@ -30,7 +30,7 @@
 
     glidepoint: glidepoint@0 {
         compatible = "cirque,pinnacle";
-        reg = <0>;
+        reg = <0x2a>;
         status = "okay";
         dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>;
         sensitivity = "4x";  // Smaller number increases sensitivity
