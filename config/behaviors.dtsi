@@ -2,20 +2,22 @@ behaviors {
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
+            require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
         };
         hmr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
+            require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
