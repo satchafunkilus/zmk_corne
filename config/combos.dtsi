@@ -4,76 +4,76 @@
         tog_qwertz {
             bindings = <&tog QWE>;
             key-positions = <LT4 RT4>;
-            layers = <0 1>;
+            layers = <BASE QWE>;
         };
 
         tog_lin {
             bindings = <&uc UC_SET_LINUX>;
             key-positions = <LT3 RT3>;
-            layers = <0 1>;
+            layers = <BASE QWE>;
         };
         tog_win {
             bindings = <&uc UC_SET_WIN_COMPOSE>;
             key-positions = <LT2 RT2>;
-            layers = <0 1>;
+            layers = <BASE QWE>;
         };
 
 
         tog_game {
             bindings = <&tog GAME>;
             key-positions = <LT0 RT0>;
-            layers = <0 1 4>;
+            layers = <BASE QWE SYM>;
         };
         tog_function {
             bindings = <&sl FUN>;
             key-positions = <LT4 LT3 LT2 LT1>;
-            layers = <0 1 5>;
+            layers = <BASE QWE NUM>;
         };
 
         caps_word_combo {
             bindings = <&caps_word>;
             key-positions = <LH0 RH0>;
-            layers = <0 1>;
+            layers = <BASE QWE>;
         };
 
         escape {
             bindings = <&mt LG(LA(K)) ESC>;
             key-positions = <LT3 LT4>;
-            layers = <0 1 3 4 5 11>;
+            layers = <BASE QWE GAME SYM NUM MOUSE>;
         };
         win {
             bindings = <&kp RGUI>;
             key-positions = <LM4 LM3 LM2>;
-            layers = <0 1>;
+            layers = <BASE QWE>;
         };
         num_word {
             bindings = <&num_word NUM>;
             key-positions = <LM3 LM2 LM1>;
-            layers = <0 1>;
+            layers = <BASE QWE>;
         };
         tab {
             bindings = <&kp TAB>;
             key-positions = <LM4 LM3>;
-            layers = <0 1>;
+            layers = <BASE QWE>;
         };
         enter {
             bindings = <&kp ENTER>;
             key-positions = <RM1 RM2 RM3>;
-            layers = <0 1>;
+            layers = <BASE QWE>;
         };       
         cut {
             bindings = <&kp LC(X)>;
             key-positions = <LB3 LB2>;
-            layers = <0 1 5>;
+            layers = <BASE QWE NUM>;
         };
         copy {
             bindings = <&kp LC(C)>;
             key-positions = <LB2 LB1>;
-            layers = <0 1 5>;
+            layers = <BASE QWE NUM>;
         };
         paste {
             bindings = <&kp LC(V)>;
             key-positions = <LB1 LB0>;
-            layers = <0 1 5>;
+            layers = <BASE QWE NUM>;
         };
     };

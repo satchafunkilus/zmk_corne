@@ -32,7 +32,7 @@
 #define ACC     9 
 #define MOUSE   10 
 
-// Symbols for better visibility in keymap
+// Symbols for better visibility in keymap:
 #define ___     &none
 #define oooo    &trans
 
@@ -52,6 +52,7 @@
 &uc {
     default-mode = <UC_MODE_WIN_COMPOSE>; //Default unicode setup to Windows. Can be switched by combo
     win-compose-key = <RALT>;
+    minimum-length = <4>;
 };
 / {
     // Include separate files for better overview
