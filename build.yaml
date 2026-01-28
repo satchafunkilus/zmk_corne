@@ -13,26 +13,31 @@
 #
 ---
 include:
-# SplitKB.com Aurora (Corne)
+  # SplitKB.com Aurora (Corne)
   - board: nice_nano_v2
     shield: splitkb_aurora_corne_left nice_view_adapter nice_view
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: aurora_corne_central_left
   - board: nice_nano_v2
     shield: splitkb_aurora_corne_right
-# Chocofi (no cirque)
-#  - board: nice_nano_v2
-#    shield: corne_left nice_view_adapter nice_view
-#    snippet: studio-rpc-usb-uart
-#    cmake-args: -DCONFIG_ZMK_STUDIO=y
-#  - board: nice_nano_v2
-#    shield: corne_right 
-# Chocofi (with cirque trackpad)
+    artifact-name: aurora_corne_peripheral_right
+  # Chocofi (no cirque)
+  #  - board: nice_nano_v2
+  #    shield: corne_left nice_view_adapter nice_view
+  #    snippet: studio-rpc-usb-uart
+  #    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  #  - board: nice_nano_v2
+  #    shield: corne_right
+  # Chocofi (with cirque trackpad)
   - board: nice_nano_v2
     shield: choco_cirque_left nice_view_adapter nice_view
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: choco_cirque_central_left
   - board: nice_nano_v2
     shield: choco_cirque_right
+    artifact-name: choco_cirque_peripheral_right
   - board: nice_nano_v2
     shield: settings_reset
+    artifact-name: settings_reset
