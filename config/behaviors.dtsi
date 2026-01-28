@@ -83,7 +83,7 @@ behaviors {
           // Repeat key or umlaut
           compatible = "zmk,behavior-adaptive-key";
           #binding-cells = <0>;
-          bindings = &key_repeat;
+          bindings = <&key_repeat>;
 
           ak_ae { trigger-keys = <A>; max-prior-idle-ms = <300>; bindings = <&uc UC_DE_AE>;};
           ak_oe { trigger-keys = <O>; max-prior-idle-ms = <300>; bindings = <&uc UC_DE_OE>;};
