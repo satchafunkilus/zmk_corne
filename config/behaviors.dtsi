@@ -89,6 +89,7 @@ behaviors {
           ak_oe { trigger-keys = <O>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_OE>;};
           ak_ue { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_UE>;};
           ak_sz { trigger-keys = <Z>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_SS>;};
+          ak_y  { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp O>,<&kp U>;};
         };
     };
     
