@@ -8,7 +8,7 @@
         };
 
         tog_lin {
-            bindings = <&uc UC_MODE_LINUX>;
+            bindings = <&uc UC_SET_LINUX>;
             key-positions = <LT3 RT3>;
             layers = <0 1>;
         };
@@ -16,7 +16,7 @@
         tog_game {
             bindings = <&tog 4>;
             key-positions = <LT0 RT0>;
-            layers = <0 1>;
+            layers = <0 1 4>;
         };
 
         tog_num {
