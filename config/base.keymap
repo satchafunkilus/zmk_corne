@@ -193,11 +193,11 @@
         umlaut_layer_qwertz {
             bindings = <
             //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                oooo            oooo            oooo        &curr_euro      oooo         oooo               oooo         &de_ue        oooo           &de_oe        oooo        oooo
+                oooo            oooo            oooo        &curr_euro      oooo         oooo             oooo          &uc UC_DE_OE   oooo         &uc UC_DE_UE   oooo         oooo
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                oooo            &de_ae          &de_sz      oooo            oooo         &degr            oooo         oooo          oooo           oooo          oooo        oooo
+                oooo            &uc UC_DE_AE    &uc UC_DE_SS oooo           oooo         &degr            oooo           oooo          oooo         oooo           oooo         oooo
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                oooo            oooo            oooo        &cedi           oooo         oooo               &es_n        oooo          oooo           oooo          oooo        oooo
+                oooo            oooo            oooo        &uc UC_ES_C_CEDILLA oooo     oooo          &uc UC_ES_N_TILDE oooo          oooo         oooo           oooo         oooo
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                             oooo            &sl ACC      oooo               oooo         oooo          oooo
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
