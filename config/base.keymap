@@ -7,8 +7,12 @@
 
 #include <behaviors.dtsi>
 #include <behaviors/unicode.dtsi>
-#include "./nodefree/helper.h"
-#include "./nodefree/german.dtsi"
+#include "zmk-helpers/helper.h"
+#include "zmk-helpers/unicode-chars/german.dtsi"
+#include "zmk-helpers/unicode-chars/spanish.dtsi"
+#include "zmk-helpers/unicode-chars/portuguese.dtsi"
+#include "zmk-helpers/unicode-chars/currency.dtsi"
+
 
 
 #include <dt-bindings/zmk/keys.h>
@@ -175,7 +179,7 @@
             //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                 oooo            oooo            oooo        oooo            oooo         oooo               oooo         oooo          &uc UC_DE_UE   oooo         oooo           oooo
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                oooo            &uc UC_DE_AE    &euro_sign  &uc UC_DE_SS    oooo         &degr_w            oooo         &uc UC_ES_N_TILDE &euro_sign oooo         &uc UC_DE_OE   oooo
+                oooo            &uc UC_DE_AE    &curr_euro  &uc UC_DE_SS    oooo         &degr_w            oooo         &uc UC_ES_N_TILDE &curr_euro oooo         &uc UC_DE_OE   oooo
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                 oooo            oooo            oooo        &uc UC_ES_C_CEDILLA oooo     oooo               oooo         oooo          oooo           oooo         oooo           oooo
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
@@ -189,7 +193,7 @@
         umlaut_layer_qwertz {
             bindings = <
             //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                oooo            oooo            oooo        &euro_sign      oooo         oooo               oooo         &de_ue        oooo           &de_oe        oooo        oooo
+                oooo            oooo            oooo        &curr_euro      oooo         oooo               oooo         &de_ue        oooo           &de_oe        oooo        oooo
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                 oooo            &de_ae          &de_sz      oooo            oooo         &degr_w            oooo         oooo          oooo           oooo          oooo        oooo
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤

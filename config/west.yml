@@ -15,7 +15,7 @@ manifest:
       import: app/west.yml
     - name: zmk-helpers
       remote: urob
-      revision: main
+      revision: v0.3
     - name: zmk-unicode
       remote: urob
       revision: v0.3
