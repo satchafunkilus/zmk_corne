@@ -4,8 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
-    - name: dhruvinsh
-      url-base: https://github.com/dhruvinsh
+    # - name: dhruvinsh
+    #   url-base: https://github.com/dhruvinsh
     - name: petejohanson
       url-base: https://github.com/petejohanson
   projects:
@@ -19,9 +19,15 @@ manifest:
     - name: zmk-unicode
       remote: urob
       revision: v0.3
+    - name: zmk-adaptive-key
+      remote: urob
+      revision: v0.3
+    - name: zmk-auto-layer
+      remote: urob
+      revision: v0.3
     - name: zmk-tri-state
-      remote: dhruvinsh
-      revision: main
+      remote: urob
+      revision: v0.3
     - name: cirque-input-module
       remote: petejohanson
       revision: main

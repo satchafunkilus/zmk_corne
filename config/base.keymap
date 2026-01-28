@@ -7,13 +7,13 @@
 
 #include <behaviors.dtsi>
 #include <behaviors/unicode.dtsi>
+#include <behaviors/num_word.dtsi>
+
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/german.dtsi"
 #include "zmk-helpers/unicode-chars/spanish.dtsi"
 #include "zmk-helpers/unicode-chars/portuguese.dtsi"
 #include "zmk-helpers/unicode-chars/currency.dtsi"
-
-
 
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -65,13 +65,13 @@
         default_layer {
             bindings = <
             //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-            &mt LG(LA(K)) ESC   &kp Q          &kp W        &kp F          &kp P         &kp B              &kp J       &kp L         &kp U         &kp Y        &kp SEMICOLON   &kp BSPC
+            &mt LG(LA(K)) ESC   &kp Q          &kp W        &kp F          &kp P         &kp B              &kp J       &kp L         &kp U         &kp Y         &kp BSPC       &kp BSPC
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                 &kp TAB         &hml RGUI A    &hml LALT R  &hml LSHFT S   &hml LCTRL T  &kp G              &kp M       &hmr RCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O    &kp SQT
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &caps_word      &kp Z          &kp X        &kp C          &kp D         &kp V              &kp K       &kp H         &kp COMMA     &kp DOT       &kp FSLH       &kp LGUI
+                &caps_word      &kp Z          &kp X        &kp C          &kp D         &kp V              &kp K       &kp H         &comma_semi     &dot_col    &kp FSLH       &kp LGUI
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                             &lt FUN TAB  &ltsl NAV UML  &kp SPACE         &kp ENTER   &lt NUM BSPC  &lt SYM DEL
+                                                             &lt FUN TAB  &htak NAV      &mt LSHFT SPACE    &kp ENTER   &ltnum NUM BSPC  &lt SYM DEL
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -81,13 +81,13 @@
         qwertz_layer {
             bindings = <
             //╭──────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-            &mt LG(LA(K)) ESC   &kp Q          &kp W         &kp E         &kp R         &kp T            &kp Z          &kp U         &kp I         &kp O        &kp P         &kp BSPC
+            &mt LG(LA(K)) ESC   &kp Q          &kp W         &kp E         &kp R         &kp T            &kp Z          &kp U         &kp I         &kp O         &kp P         &kp BSPC
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-            &kp TAB             &kp A          &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G            &kp H          &hmr RCTRL J  &hmr RSHFT K  &hmr LALT L  &kp SEMI      &kp SQT
+            &kp TAB             &kp A          &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G            &kp H          &hmr RCTRL J  &hmr RSHFT K  &hmr LALT L   &kp SEMI      &kp SQT
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-            &sk LSHFT           &kp Y          &kp X         &kp C         &kp V         &kp B            &kp N          &kp M         &kp COMMA     &kp DOT      &kp FSLH      &kp LGUI
+            &sk LSHFT           &kp Y          &kp X         &kp C         &kp V         &kp B            &kp N          &kp M         &comma_semi   &dot_col      &kp FSLH      &kp LGUI
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                            &lt FUN TAB    &ltsl NAV UMLQ &kp SPACE      &kp ENTER      &lt NUM BSPC  &lt SYM DEL
+                                                            &lt FUN TAB    &htak NAV     &mt LSHFT SPACE  &kp ENTER      &ltnum NUM BSPC  &lt SYM DEL
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -101,9 +101,9 @@
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                 &kp TAB         &kp A          &kp R        &kp S          &kp T         &kp G              &kp M       &hmr RCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O    &kp SQT
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &kp LSHFT       &kp Z          &kp X        &kp C          &kp D         &kp V              &kp K       &kp H         &kp COMMA     &kp DOT       &kp FSLH       &kp LGUI
+                &kp LSHFT       &kp Z          &kp X        &kp C          &kp D         &kp V              &kp K       &kp H          &comma_semi   &dot_col     &kp FSLH       &kp LGUI
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                             &lt FUN TAB  &ltsl NUM UML  &kp SPACE         &kp ENTER   &lt NAV BSPC  &lt SYM DEL
+                                                             &lt FUN TAB  &htak NUM      &mt LSHFT SPACE    &kp ENTER   &ltnum NAV BSPC  &lt SYM DEL
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -151,7 +151,7 @@
             //├──────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                 oooo          &kp KP_ASTERISK  &kp N7        &kp N8       &kp N9        &kp COMMA          &kp INS       &kp HOME      &kp PG_DN     &kp PG_UP      &kp END        ___
             //╰──────────────┴──────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                            &kp DELETE    &kp N0        &kp RETURN          ___          ___        ___
+                                                            &kp DELETE    &kp N0        &kp RETURN          ___          &tog NUM        ___
             //                                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
             sensor-bindings = <&inc_dec_kp UP DOWN>;

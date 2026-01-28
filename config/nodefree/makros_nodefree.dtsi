@@ -19,6 +19,15 @@ ZMK_BEHAVIOR(rpar_gt, mod_morph,
     bindings = <&kp RPAR>, <&kp GT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
+ZMK_BEHAVIOR(dot_col, mod_morph,
+    bindings = <&kp DOT>, <&kp COLON>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+ZMK_BEHAVIOR(comma_semi, mod_morph,
+    bindings = <&kp COMMA>, <&kp SEMI>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
 
 
 /* Horizontal combos - right hand */

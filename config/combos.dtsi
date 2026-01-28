@@ -12,6 +12,12 @@
             key-positions = <LT3 RT3>;
             layers = <0 1>;
         };
+        tog_win {
+            bindings = <&uc UC_SET_WIN_COMPOSE>;
+            key-positions = <LT2 RT2>;
+            layers = <0 1>;
+        };
+
 
         tog_game {
             bindings = <&tog 4>;
