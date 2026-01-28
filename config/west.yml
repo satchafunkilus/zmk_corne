@@ -16,6 +16,9 @@ manifest:
     - name: zmk-helpers
       remote: urob
       revision: main
+    - name: zmk-unicode
+      remote: urob
+      revision: v0.3
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
@@ -24,4 +27,3 @@ manifest:
       revision: main
   self:
     path: config
-    
