@@ -8,7 +8,7 @@
         };
 
         tog_lin {
-            bindings = <&uc UC_SET_LINUX>;
+            bindings = <&uc UC_SET_LINUX_ALT>;
             key-positions = <LT3 RT3>;
             layers = <0 1>;
         };
