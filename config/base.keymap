@@ -9,7 +9,7 @@
 #include <behaviors/unicode.dtsi>
 #include "./nodefree/helper.h"
 #include "./nodefree/german.dtsi"
-#include "./nodefree/makros_nodefree.dtsi"
+
 
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -34,6 +34,7 @@
 #define oooo    &trans
 
 
+#include "./nodefree/makros_nodefree.dtsi"
 
 // Define timings for core behaviors
 &lt {
