@@ -18,16 +18,21 @@
             layers = <BASE QWE>;
         };
 
+        sl_acc {
+            bindings = <&sl ACC>;
+            key-positions = <RT1 RT2 RT3 RT4>;
+            layers = <BASE QWE ACC>;
+        };
 
         tog_game {
             bindings = <&tog GAME>;
             key-positions = <LT0 RT0>;
-            layers = <BASE QWE SYM>;
+            layers = <BASE QWE GAME>;
         };
-        tog_function {
+        sl_function {
             bindings = <&sl FUN>;
             key-positions = <LT4 LT3 LT2 LT1>;
-            layers = <BASE QWE NUM>;
+            layers = <BASE QWE FUN>;
         };
 
         caps_word_combo {
@@ -36,7 +41,7 @@
             layers = <BASE QWE>;
         };
 
-        escape {
+        mt_mute_escape {
             bindings = <&mt LG(LA(K)) ESC>;
             key-positions = <LT3 LT4>;
             layers = <BASE QWE GAME SYM NUM MOUSE>;

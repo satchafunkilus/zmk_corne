@@ -80,16 +80,18 @@ behaviors {
 
         // Adaptive Key related behaviors
         ak_rep: ak_rep {
-          // Repeat key or umlaut
-          compatible = "zmk,behavior-adaptive-key";
-          #binding-cells = <0>;
-          bindings = <&key_repeat>;
+            // Repeat key or umlaut
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&key_repeat>;
 
-          ak_ae { trigger-keys = <A>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_AE>;};
-          ak_oe { trigger-keys = <O>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_OE>;};
-          ak_ue { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_UE>;};
-          ak_sz { trigger-keys = <Z>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_SS>;};
-          ak_y  { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp O>,<&kp U>;};
+            ak_ae { trigger-keys = <A>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_AE>;};
+            ak_oe { trigger-keys = <O>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_OE>;};
+            ak_ue { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_UE>;};
+            ak_sz { trigger-keys = <Z>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_SS>;};
+            ak_y  { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp O>,<&kp U>;};
+            ak_i  { trigger-keys = <I>; max-prior-idle-ms = <300>; bindings = <&kp C>,<&kp H>;};
         };
+
     };
     
