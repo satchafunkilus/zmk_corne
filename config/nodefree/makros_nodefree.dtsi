@@ -1,6 +1,6 @@
 
 
-#include "./nodefree/helper_win_lin.h"
+#include "helper_win_lin.h"
 
 #define COMBO_TERM_FAST 20
 #define COMBO_TERM_SLOW 35
@@ -31,6 +31,9 @@ ZMK_BEHAVIOR(comma_semi, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
+// Macros
+ZMK_MACRO(wink,   bindings = <&kp CARET &kp CARET>;)
+ZMK_MACRO(ppt_fp, bindings = <&kp LALT &kp H &kp F &kp P>;)
 
 
 /* Horizontal combos - right hand */

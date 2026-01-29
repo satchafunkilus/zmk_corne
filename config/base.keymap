@@ -56,7 +56,7 @@
 };
 / {
     // Include separate files for better overview
-    #include "makros.dtsi"
+    //#include "makros.dtsi"
     #include "behaviors.dtsi"
     #include "combos.dtsi"
 
