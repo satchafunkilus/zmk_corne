@@ -37,7 +37,6 @@
 #define oooo    &trans
 
 // Additional includes defined down here, because layer names are required
-#include "./nodefree/german.dtsi"
 #include "./nodefree/makros_nodefree.dtsi"
 
 // Define timings for core behaviors

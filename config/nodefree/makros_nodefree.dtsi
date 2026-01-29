@@ -1,4 +1,7 @@
 
+
+#include "./nodefree/helper_win_lin.h"
+
 #define COMBO_TERM_FAST 20
 #define COMBO_TERM_SLOW 35
 
@@ -47,6 +50,19 @@ ZMK_COMBO(lbkt,  &kp LBKT,      RB1 RB2,     BASE QWE    , COMBO_TERM_FAST)
 ZMK_COMBO(rbkt,  &kp RBKT,      RB2 RB3,     BASE QWE    , COMBO_TERM_FAST)
 ZMK_COMBO(lbrc,  &kp LBRC,      RB1 RB2,              NAV SYM, COMBO_TERM_FAST)
 ZMK_COMBO(rbrc,  &kp RBRC,      RB2 RB3,              NAV SYM, COMBO_TERM_FAST)
+
+
+/* German umlauts Linux */
+ZMK_UNICODE_PAIR_LIN(   de_ae_l,      N0, N0,  E, N4,    N0, N0,  C, N4)
+ZMK_UNICODE_PAIR_LIN(   de_oe_l,      N0, N0,  F, N6,    N0, N0,  D, N6)
+ZMK_UNICODE_PAIR_LIN(   de_ue_l,      N0, N0,  F,  C,    N0, N0,  D,  C)
+ZMK_UNICODE_SINGLE_LIN( de_sz_l,      N0, N0,  D,  F)
+
+/* German umlauts Windows */
+ZMK_UNICODE_PAIR_WIN(   de_ae,      N0, N0,  E, N4,    N0, N0,  C, N4)
+ZMK_UNICODE_PAIR_WIN(   de_oe,      N0, N0,  F, N6,    N0, N0,  D, N6)
+ZMK_UNICODE_PAIR_WIN(   de_ue,      N0, N0,  F,  C,    N0, N0,  D,  C)
+ZMK_UNICODE_SINGLE_WIN( de_sz,      N0, N0,  D,  F)
 
 
 // Additional unicode symbols
