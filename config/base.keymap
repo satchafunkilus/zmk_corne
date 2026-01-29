@@ -42,7 +42,7 @@
 
 // Symbols for better visibility in keymap:
 #define ___     &none
-#define oooo    &transi
+#define oooo    &trans
 #define USL     UC_SET_LINUX
 #define USW     UC_SET_WIN_COMPOSE
 
