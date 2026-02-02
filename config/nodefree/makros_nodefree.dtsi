@@ -81,7 +81,7 @@ ZMK_COMBO(paste,           &kp LC(V),         LB1 LB0,     BASE QWE  NUM NAV SYM
 // Mixed combos
 ZMK_COMBO(tog_qwertz,      &tog QWE,          LT4 RT4,     BASE QWE                   , COMBO_TERM_FAST)
 ZMK_COMBO(tog_game,        &tog GAME,         LT0 RT0,     BASE QWE GAME              , COMBO_TERM_FAST)
-
+ZMK_COMBO(caps_word,       &caps_word,        LH0 RH0,     BASE QWE                   , COMBO_TERM_FAST)
 
 /* German umlauts Linux */
 ZMK_UNICODE_PAIR_LIN(   de_ae_l,      N0, N0,  E, N4,    N0, N0,  C, N4)
