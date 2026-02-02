@@ -56,7 +56,7 @@
         compatible = "cirque,pinnacle";
         reg = <0x2a>;
         status = "okay";
-        dr-gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>; // Changed to gpio 3 / Pin 0.20
+        dr-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>; // Changed to gpio 1 / Pin 0.06
         sensitivity = "4x";  // Smaller number increases sensitivity
         sleep;
         //no-taps;
