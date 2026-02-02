@@ -8,8 +8,8 @@ manifest:
     #   url-base: https://github.com/dhruvinsh
     - name: petejohanson
       url-base: https://github.com/petejohanson
-    - name: juniorz
-      url-base: https://github.com/juniorz
+    #- name: juniorz
+    #  url-base: https://github.com/juniorz
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -33,9 +33,9 @@ manifest:
     - name: cirque-input-module
       remote: petejohanson
       revision: main
-    - name: zmk-keyboard-cirque-pinnacle
-      remote: juniorz
-      revision: main
-      import: west.yml
+    #- name: zmk-keyboard-cirque-pinnacle
+    #  remote: juniorz
+    #  revision: main
+    #  import: west.yml
   self:
     path: config
