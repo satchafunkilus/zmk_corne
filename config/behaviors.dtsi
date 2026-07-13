@@ -1,4 +1,5 @@
 behaviors {
+        // Homerow related behaviors
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -28,6 +29,7 @@ behaviors {
             quick-tap-ms = <125>;
             flavor = "balanced";
             bindings = <&kp>, <&lpar_lt>;
+            require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
@@ -38,20 +40,12 @@ behaviors {
             quick-tap-ms = <125>;
             flavor = "balanced";
             bindings = <&kp>, <&rpar_gt>;
+            require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
-        eur_dol: euro_dollar {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            flavor = "tap-preferred";
-            bindings =
-                <&euro_sign>,
-                <&kp>;
-        };
+
+        // Layer switching related behaviors
         ltsl: layerTapSL {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -62,14 +56,45 @@ behaviors {
                 <&mo>,
                 <&sl>;
         };
-        htsk: htsk {
+
+        htak: htAdaptiveKey { 
+            // Used for repead key or adaptive key
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             flavor = "tap-preferred";
             bindings =
-                <&kp>,
-                <&sk>;
+                <&mo>,
+                <&ak_rep>;
         };
+        
+        ltnum: layerTapNumWord {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            flavor = "tap-preferred";
+            bindings =
+                <&num_word>,
+                <&kp>;
+        };
+        //
+
+        // Adaptive Key related behaviors
+        ak_rep: ak_rep {
+            // Repeat key or umlaut
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&key_repeat>;
+
+            ak_ae { trigger-keys = <A>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_AE>;};
+            ak_oe { trigger-keys = <O>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_OE>;};
+            ak_ue { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_UE>;};
+            ak_sz { trigger-keys = <Z>; max-prior-idle-ms = <300>; bindings = <&kp BSPC>,<&uc UC_DE_SS>;};
+            ak_y  { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp O>,<&kp U>;};
+            ak_i  { trigger-keys = <I>; max-prior-idle-ms = <300>; bindings = <&kp C>,<&kp H>;};
+        };
+
     };
+    

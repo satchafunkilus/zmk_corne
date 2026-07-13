@@ -1,4 +1,7 @@
 
+
+#include "helper_win_lin.h"
+
 #define COMBO_TERM_FAST 20
 #define COMBO_TERM_SLOW 35
 
@@ -19,26 +22,78 @@ ZMK_BEHAVIOR(rpar_gt, mod_morph,
     bindings = <&kp RPAR>, <&kp GT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
+// Dot/Colon and Comma/Semikolon keys
+ZMK_BEHAVIOR(dot_col, mod_morph,
+    bindings = <&kp DOT>, <&kp COLON>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+ZMK_BEHAVIOR(comma_semi, mod_morph,
+    bindings = <&kp COMMA>, <&kp SEMI>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+// Dollar/Euro Tap-Dance key
+ZMK_TAP_DANCE(td_usd_eur, 
+    tapping-term-ms = <200>;
+    bindings = <&kp DLLR>, <&curr_euro>;
+)
+
+
+
+// Macros
+ZMK_MACRO(wink,   bindings = <&kp CARET &kp CARET>;)
+ZMK_MACRO(ppt_fp, bindings = <&kp LALT &kp H &kp F &kp P>;)
 
 
 /* Horizontal combos - right hand */
-ZMK_COMBO(crt,  &wink,          RT0 RT1,     BASE QWE LINUX QWEL SYM, COMBO_TERM_FAST)
-ZMK_COMBO(amp,  &kp AMPS,       RT1 RT2,     BASE QWE LINUX QWEL SYM, COMBO_TERM_FAST)
-ZMK_COMBO(anf,  &kp DQT,        RT2 RT3,     BASE QWE LINUX QWEL SYM, COMBO_TERM_FAST)
-ZMK_COMBO(apo,  &kp SQT,        RT3 RT4,     BASE QWE LINUX QWEL SYM, COMBO_TERM_FAST)
+ZMK_COMBO(crt,        &wink,            RT0 RT1,     BASE QWE SYM, COMBO_TERM_FAST)
+ZMK_COMBO(amp,        &kp AMPS,         RT1 RT2,     BASE QWE SYM, COMBO_TERM_FAST)
+ZMK_COMBO(anf,        &kp DQT,          RT2 RT3,     BASE QWE SYM, COMBO_TERM_FAST)
+ZMK_COMBO(apo,        &kp SQT,          RT3 RT4,     BASE QWE SYM, COMBO_TERM_FAST)
+ZMK_COMBO(sl_accent,  &sl ACC,  RT1 RT2 RT3 RT4,     BASE QWE ACC               , COMBO_TERM_FAST)
 
-ZMK_COMBO(min,   &kp MINUS,     RM0 RM1,     BASE QWE LINUX QWEL        , COMBO_TERM_FAST)
-ZMK_COMBO(lpar,  HRC_LPAR,      RM1 RM2,     BASE QWE LINUX QWEL        , COMBO_TERM_FAST)
-ZMK_COMBO(rpar,  HRC_RPAR,      RM2 RM3,     BASE QWE LINUX QWEL        , COMBO_TERM_FAST)
-ZMK_COMBO(lt,    &kp LT,        RM1 RM2,                         NAV SYM, COMBO_TERM_FAST)
-ZMK_COMBO(gt,    &kp GT,        RM2 RM3,                         NAV SYM, COMBO_TERM_FAST)
+ZMK_COMBO(min,        &kp MINUS,        RM0 RM1,     BASE QWE    , COMBO_TERM_FAST)
+ZMK_COMBO(lpar,       HRC_LPAR,         RM1 RM2,     BASE QWE    , COMBO_TERM_FAST)
+ZMK_COMBO(rpar,       HRC_RPAR,         RM2 RM3,     BASE QWE    , COMBO_TERM_FAST)
+ZMK_COMBO(bspc,       &kp BSPC,         RM3 RM4,     BASE QWE    , COMBO_TERM_FAST)
+ZMK_COMBO(enter,      &kp ENTER,    RM1 RM2 RM3,     BASE QWE    , COMBO_TERM_FAST)
 
-ZMK_COMBO(und,   &kp UNDER,     RB0 RB1,     BASE QWE LINUX QWEL        , COMBO_TERM_FAST)
-ZMK_COMBO(lbkt,  &kp LBKT,      RB1 RB2,     BASE QWE LINUX QWEL        , COMBO_TERM_FAST)
-ZMK_COMBO(rbkt,  &kp RBKT,      RB2 RB3,     BASE QWE LINUX QWEL        , COMBO_TERM_FAST)
-ZMK_COMBO(lbrc,  &kp LBRC,      RB1 RB2,                         NAV SYM, COMBO_TERM_FAST)
-ZMK_COMBO(rbrc,  &kp RBRC,      RB2 RB3,                         NAV SYM, COMBO_TERM_FAST)
+ZMK_COMBO(lt,         &kp LT,           RM1 RM2,              NAV SYM, COMBO_TERM_FAST)
+ZMK_COMBO(gt,         &kp GT,           RM2 RM3,              NAV SYM, COMBO_TERM_FAST)
 
+ZMK_COMBO(under,      &kp UNDER,     RB0 RB1,     BASE QWE    , COMBO_TERM_FAST)
+ZMK_COMBO(lbkt,       &kp LBKT,      RB1 RB2,     BASE QWE    , COMBO_TERM_FAST)
+ZMK_COMBO(rbkt,       &kp RBKT,      RB2 RB3,     BASE QWE    , COMBO_TERM_FAST)
+ZMK_COMBO(lbrc,       &kp LBRC,      RB1 RB2,              NAV SYM, COMBO_TERM_FAST)
+ZMK_COMBO(rbrc,       &kp RBRC,      RB2 RB3,              NAV SYM, COMBO_TERM_FAST)
+
+// Left half combos
+ZMK_COMBO(mt_mute_escape,  &mt LG(LA(K)) ESC, LT4 LT3,     BASE QWE GAME NAV SYM MOUSE, COMBO_TERM_FAST)
+ZMK_COMBO(sl_function,     &sl FUN,   LT4 LT3 LT2 LT1,     BASE QWE              FUN  , COMBO_TERM_FAST)
+ZMK_COMBO(win_key,         &kp RGUI,          LM4 LM3 LM2, BASE QWE                   , COMBO_TERM_FAST)
+ZMK_COMBO(num_word,        &num_word NUM,     LM3 LM2 LM1, BASE QWE                   , COMBO_TERM_FAST)
+ZMK_COMBO(tab,             &kp TAB,           LM4 LM3,     BASE QWE                   , COMBO_TERM_FAST)
+ZMK_COMBO(cut,             &kp LC(X),         LB3 LB2,     BASE QWE  NUM NAV SYM      , COMBO_TERM_FAST)
+ZMK_COMBO(copy,            &kp LC(C),         LB2 LB1,     BASE QWE  NUM NAV SYM      , COMBO_TERM_FAST)
+ZMK_COMBO(paste,           &kp LC(V),         LB1 LB0,     BASE QWE  NUM NAV SYM      , COMBO_TERM_FAST)
+
+
+// Mixed combos
+ZMK_COMBO(tog_qwertz,      &tog QWE,          LT4 RT4,     BASE QWE                   , COMBO_TERM_FAST)
+ZMK_COMBO(tog_game,        &tog GAME,         LT0 RT0,     BASE QWE GAME              , COMBO_TERM_FAST)
+ZMK_COMBO(caps_word,       &caps_word,        LH0 RH0,     BASE QWE                   , COMBO_TERM_FAST)
+
+/* German umlauts Linux */
+ZMK_UNICODE_PAIR_LIN(   de_ae_l,      N0, N0,  E, N4,    N0, N0,  C, N4)
+ZMK_UNICODE_PAIR_LIN(   de_oe_l,      N0, N0,  F, N6,    N0, N0,  D, N6)
+ZMK_UNICODE_PAIR_LIN(   de_ue_l,      N0, N0,  F,  C,    N0, N0,  D,  C)
+ZMK_UNICODE_SINGLE_LIN( de_sz_l,      N0, N0,  D,  F)
+
+/* German umlauts Windows */
+ZMK_UNICODE_PAIR_WIN(   de_ae,      N0, N0,  E, N4,    N0, N0,  C, N4)
+ZMK_UNICODE_PAIR_WIN(   de_oe,      N0, N0,  F, N6,    N0, N0,  D, N6)
+ZMK_UNICODE_PAIR_WIN(   de_ue,      N0, N0,  F,  C,    N0, N0,  D,  C)
+ZMK_UNICODE_SINGLE_WIN( de_sz,      N0, N0,  D,  F)
 
 
 // Additional unicode symbols
@@ -93,7 +148,6 @@ ZMK_UNICODE_PAIR(u_circ,        N0, N0,  F,  B,     N0, N0,  D,  B)
 ZMK_UNICODE_PAIR_LIN(u_gr_l,    N0, N0,  F,  N9,    N0, N0,  D,  N9)
 ZMK_UNICODE_PAIR_LIN(u_acu_l,   N0, N0,  F,  A,     N0, N0,  D,  A)
 ZMK_UNICODE_PAIR_LIN(u_circ_l,  N0, N0,  F,  B,     N0, N0,  D,  B)
-
 
 // Conditional layer
 //ZMK_CONDITIONAL_LAYER(1 2, 4)

@@ -27,12 +27,18 @@
 
 &pro_micro_i2c {
     status = "okay";
+    compatible = "nordic,nrf-twim";
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
+    clock-frequency = <400000>; // Reduziere i2c_clock speed von 400kHz auf 100kHz für mehr Stabilität
+
 
     glidepoint: glidepoint@2a {
         compatible = "cirque,pinnacle";
         reg = <0x2a>;
         status = "okay";
-        dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>;
+        dr-gpios = <&pro_micro 1 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>; // Changed to gpio 1 / Pin 0.06
         sensitivity = "4x";  // Smaller number increases sensitivity
         sleep;
         //no-taps;
