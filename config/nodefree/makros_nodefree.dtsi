@@ -162,3 +162,201 @@ ZMK_BEHAVIOR(swapper_r, tri_state,
 bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
 ignored-key-positions = <LT0>;
 )
+
+/* -------------------------------------------------------------------------- */
+/* Cross-platform Compose macros                                              */
+/* Linux:   XKB Compose key = Right Alt                                       */
+/* Windows: WinCompose Compose key = Right Alt                                */
+/* -------------------------------------------------------------------------- */
+
+
+/* ============================== ä / Ä ===================================== */
+
+ZMK_MACRO(
+    compose_ae_lower,
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings =
+        <&macro_tap &kp RALT>
+        , <&macro_tap &kp DQT>
+        , <&macro_tap &kp A>
+        ;
+)
+
+ZMK_MACRO(
+    compose_ae_upper,
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings =
+        <&macro_tap &kp RALT>
+        , <&macro_tap &kp DQT>
+        , <&macro_tap &kp LS(A)>
+        ;
+)
+
+ZMK_BEHAVIOR(
+    compose_ae,
+    mod_morph,
+    bindings = <&compose_ae_lower>, <&compose_ae_upper>;
+    mods = <(MOD_LSFT | MOD_RSFT)>;
+)
+
+
+/* ============================== ö / Ö ===================================== */
+
+ZMK_MACRO(
+    compose_oe_lower,
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings =
+        <&macro_tap &kp RALT>
+        , <&macro_tap &kp DQT>
+        , <&macro_tap &kp O>
+        ;
+)
+
+ZMK_MACRO(
+    compose_oe_upper,
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings =
+        <&macro_tap &kp RALT>
+        , <&macro_tap &kp DQT>
+        , <&macro_tap &kp LS(O)>
+        ;
+)
+
+ZMK_BEHAVIOR(
+    compose_oe,
+    mod_morph,
+    bindings = <&compose_oe_lower>, <&compose_oe_upper>;
+    mods = <(MOD_LSFT | MOD_RSFT)>;
+)
+
+
+/* ============================== ü / Ü ===================================== */
+
+ZMK_MACRO(
+    compose_ue_lower,
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings =
+        <&macro_tap &kp RALT>
+        , <&macro_tap &kp DQT>
+        , <&macro_tap &kp U>
+        ;
+)
+
+ZMK_MACRO(
+    compose_ue_upper,
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings =
+        <&macro_tap &kp RALT>
+        , <&macro_tap &kp DQT>
+        , <&macro_tap &kp LS(U)>
+        ;
+)
+
+ZMK_BEHAVIOR(
+    compose_ue,
+    mod_morph,
+    bindings = <&compose_ue_lower>, <&compose_ue_upper>;
+    mods = <(MOD_LSFT | MOD_RSFT)>;
+)
+
+
+/* ============================== ß ========================================= */
+/* Compose, s, s */
+
+ZMK_MACRO(
+    compose_ss,
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings =
+        <&macro_tap &kp RALT>
+        , <&macro_tap &kp S>
+        , <&macro_tap &kp S>
+        ;
+)
+
+
+/* ============================== € ========================================= */
+/* Compose, =, e */
+
+ZMK_MACRO(
+    compose_euro,
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings =
+        <&macro_tap &kp RALT>
+        , <&macro_tap &kp EQUAL>
+        , <&macro_tap &kp E>
+        ;
+)
+
+
+/* ============================== ñ / Ñ ===================================== */
+/* Compose, ~, n */
+
+ZMK_MACRO(
+    compose_enye_lower,
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings =
+        <&macro_tap &kp RALT>
+        , <&macro_tap &kp TILDE>
+        , <&macro_tap &kp N>
+        ;
+)
+
+ZMK_MACRO(
+    compose_enye_upper,
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings =
+        <&macro_tap &kp RALT>
+        , <&macro_tap &kp TILDE>
+        , <&macro_tap &kp LS(N)>
+        ;
+)
+
+ZMK_BEHAVIOR(
+    compose_enye,
+    mod_morph,
+    bindings = <&compose_enye_lower>, <&compose_enye_upper>;
+    mods = <(MOD_LSFT | MOD_RSFT)>;
+)
+
+
+/* ============================== ç / Ç ===================================== */
+/* Compose, comma, c */
+
+ZMK_MACRO(
+    compose_ccedilla_lower,
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings =
+        <&macro_tap &kp RALT>
+        , <&macro_tap &kp COMMA>
+        , <&macro_tap &kp C>
+        ;
+)
+
+ZMK_MACRO(
+    compose_ccedilla_upper,
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings =
+        <&macro_tap &kp RALT>
+        , <&macro_tap &kp COMMA>
+        , <&macro_tap &kp LS(C)>
+        ;
+)
+
+ZMK_BEHAVIOR(
+    compose_ccedilla,
+    mod_morph,
+    bindings = <&compose_ccedilla_lower>, <&compose_ccedilla_upper>;
+    mods = <(MOD_LSFT | MOD_RSFT)>;
+)
