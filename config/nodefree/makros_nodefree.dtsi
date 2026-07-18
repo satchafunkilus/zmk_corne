@@ -173,12 +173,10 @@ ignored-key-positions = <LT0>;
 /* ============================== ä / Ä ===================================== */
 
 ZMK_MACRO(compose_ae_lower, 
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp DQT>, <&macro_tap &kp A>;
 )
 
 ZMK_MACRO(compose_ae_upper, 
-    wait-ms = <30>; tap-ms = <30>; 
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp DQT>, <&macro_tap &kp LS(A)>;
 )
 
@@ -192,12 +190,10 @@ ZMK_BEHAVIOR(compose_ae,
 /* ============================== ö / Ö ===================================== */
 
 ZMK_MACRO(compose_oe_lower, 
-    wait-ms = <30>; tap-ms = <30>; 
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp DQT>, <&macro_tap &kp O>;
 )
 
 ZMK_MACRO(compose_oe_upper, 
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp DQT>, <&macro_tap &kp LS(O)>;
 )
 
@@ -211,12 +207,10 @@ ZMK_BEHAVIOR(compose_oe,
 /* ============================== ü / Ü ===================================== */
 
 ZMK_MACRO(compose_ue_lower, 
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp DQT>, <&macro_tap &kp U>;
 )
 
 ZMK_MACRO(compose_ue_upper, 
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp DQT>, <&macro_tap &kp LS(U)>;
 )
 
@@ -231,7 +225,6 @@ ZMK_BEHAVIOR(compose_ue,
 /* Compose, s, s */
 
 ZMK_MACRO(compose_ss, 
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp S>, <&macro_tap &kp S>;
 )
 
@@ -240,7 +233,6 @@ ZMK_MACRO(compose_ss,
 /* Compose, =, e */
 
 ZMK_MACRO(compose_euro, 
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp EQUAL>, <&macro_tap &kp E>;
 )
 
@@ -249,12 +241,10 @@ ZMK_MACRO(compose_euro,
 /* Compose, ~, n */
 
 ZMK_MACRO(compose_enye_lower, 
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp TILDE>, <&macro_tap &kp N>;
 )
 
 ZMK_MACRO(compose_enye_upper, 
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp TILDE>, <&macro_tap &kp LS(N)>;
 )
 
@@ -269,12 +259,10 @@ ZMK_BEHAVIOR(compose_enye,
 /* Compose, comma, c */
 
 ZMK_MACRO(compose_ccedilla_lower, 
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp COMMA>, <&macro_tap &kp C>;
 )
 
 ZMK_MACRO(compose_ccedilla_upper, 
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp COMMA>, <&macro_tap &kp LS(C)>;
 )
 
@@ -289,27 +277,22 @@ ZMK_BEHAVIOR(compose_ccedilla,
 /* Grave: à è ì ò ù */
 
 ZMK_MACRO(comp_a_gr,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp GRAVE>, <&macro_tap &kp A>;
 )
 
 ZMK_MACRO(comp_e_gr,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp GRAVE>, <&macro_tap &kp E>;
 )
 
 ZMK_MACRO(comp_i_gr,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp GRAVE>, <&macro_tap &kp I>;
 )
 
 ZMK_MACRO(comp_o_gr,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp GRAVE>, <&macro_tap &kp O>;
 )
 
 ZMK_MACRO(comp_u_gr,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp GRAVE>, <&macro_tap &kp U>;
 )
 
@@ -318,27 +301,22 @@ ZMK_MACRO(comp_u_gr,
 /* Acute: á é í ó ú */
 
 ZMK_MACRO(comp_a_acu,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp SQT>, <&macro_tap &kp A>;
 )
 
 ZMK_MACRO(comp_e_acu,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp SQT>, <&macro_tap &kp E>;
 )
 
 ZMK_MACRO(comp_i_acu,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp SQT>, <&macro_tap &kp I>;
 )
 
 ZMK_MACRO(comp_o_acu,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp SQT>, <&macro_tap &kp O>;
 )
 
 ZMK_MACRO(comp_u_acu,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp SQT>, <&macro_tap &kp U>;
 )
 
@@ -347,27 +325,22 @@ ZMK_MACRO(comp_u_acu,
 /* Circumflex: â ê î ô û */
 
 ZMK_MACRO(comp_a_cir,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp CARET>, <&macro_tap &kp A>;
 )
 
 ZMK_MACRO(comp_e_cir,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp CARET>, <&macro_tap &kp E>;
 )
 
 ZMK_MACRO(comp_i_cir,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp CARET>, <&macro_tap &kp I>;
 )
 
 ZMK_MACRO(comp_o_cir,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp CARET>, <&macro_tap &kp O>;
 )
 
 ZMK_MACRO(comp_u_cir,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp CARET>, <&macro_tap &kp U>;
 )
 
@@ -375,6 +348,5 @@ ZMK_MACRO(comp_u_cir,
 /* Tilde: ã */
 
 ZMK_MACRO(comp_a_til,
-    wait-ms = <30>; tap-ms = <30>;
     bindings = <&macro_tap &kp RALT>, <&macro_tap &kp TILDE>, <&macro_tap &kp A>;
 )
